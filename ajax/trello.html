@@ -1,0 +1,125 @@
+
+<script src="../js/jquery-1.9.1.min.js"></script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
+<div class="row">
+	<div id="breadcrumb" class="col-xs-12">
+		<ol class="breadcrumb">
+			<li><a href="profile.php">Dashboard</a></li>
+			<li><a href="#">Stats</a></li>
+			<li><a href="#">Trello</a></li>
+		</ol>
+	</div>
+</div>
+<style>
+.ow-server {
+font-size:10px;
+
+}
+</style>
+
+ <div class="row">
+ 
+				
+								<div class="col-xs-5 ow-server" id="panel1" onclick="window.open('https://trello.com/b/UpR18qm7/bundles', '_blank');" style="border-style:outset;border-size:5px">
+								<h4 class="page-header">Bundles</h4>
+							<input id="vKnob" class="knob" data-width="80"  data-height="80" data-angleOffset="180"  data-fgColor="#6AA662" data-bgColor="#525252" data-skin="tron" data-thickness=".2" data-readonly="true" data-max="50">Pending
+														<input id="pKnob" class="knob" data-width="80"  data-height="80" data-angleOffset="180" data-fgColor="#6AA662" data-bgColor="#525252" data-skin="tron" data-thickness=".2" data-readonly="true" data-max="100">Provisioning
+														<input id="pickup" class="knob" data-width="80"  data-height="80" data-angleOffset="180" data-fgColor="#6AA662" data-bgColor="#525252" data-skin="tron" data-thickness=".2" data-readonly="true" data-max="30">Pickup
+														<input id="followup" class="knob" data-width="80"  data-height="80" data-angleOffset="180" data-fgColor="#6AA662"data-bgColor="#525252" data-skin="tron" data-thickness=".2" data-readonly="true" data-max="100">BOH Followup
+															<input id="bKnob" class="knob" data-width="80"  data-height="80" data-angleOffset="180" data-fgColor="#F51631"data-bgColor="#525252" data-skin="tron" data-thickness=".2" data-readonly="true" data-max="100">Overdue
+						</div>
+						
+							<div class="col-xs-5 ow-server" id="panel2" onclick="window.open('https://trello.com/b/8qrZcjWO/efm-ground-floor', '_blank');"style="border-style:outset;border-size:5px">
+								<h4 class="page-header">EFM Ground Floor</h4>
+						
+														<input id="bundles" class="knob" data-width="80"  data-height="80" data-angleOffset="180" data-fgColor="#6AA662" data-bgColor="#525252" data-skin="tron" data-thickness=".2" data-readonly="true" data-max="30">Bundles
+														<input id="credits" class="knob" data-width="80"  data-height="80" data-angleOffset="180" data-fgColor="#6AA662" data-bgColor="#525252" data-skin="tron" data-thickness=".2" data-readonly="true" data-max="30">Credits
+														<input id="orders" class="knob" data-width="80"  data-height="80" data-angleOffset="180" data-fgColor="#6AA662" data-bgColor="#525252" data-skin="tron" data-thickness=".2" data-readonly="true" data-max="30">Orders
+														<input id="messages" class="knob" data-width="80"  data-height="80" data-angleOffset="180" data-fgColor="#6AA662" data-bgColor="#525252" data-skin="tron" data-thickness=".2" data-readonly="true" data-max="10">Messages
+														<input id="eKnob" class="knob" data-width="80"  data-height="80" data-angleOffset="180" data-fgColor="#F51631"data-bgColor="#525252" data-skin="tron" data-thickness=".2" data-readonly="true" data-max="30">Overdue
+						</div>
+					
+					
+</div>
+
+
+				
+
+<script src="../plugins/jQuery-Knob/jquery.knob.js"></script>
+<script>
+var trelloKey = "&key=2b9e7d968e4d873a91fa5b00e879f98f&token=51959027afda5ee368d233ba656989afd458cba8d1acf64fa8289be8c99d3c96";
+var trelloAPI = "https://api.trello.com";
+var tCall = "";
+var counter = 0;
+
+
+
+function dispTrelloCount(t, div){
+
+$.getJSON(trelloAPI + t + trelloKey, function(result){
+        $.each(result, function(i, field){
+       //   $("#panel").append(counter + field.name + "<p>");   code to display a list of the name property for each item
+         counter = counter + 1;
+        });
+$(div).val(counter).trigger("change");
+$(div).knob();
+counter = 0;
+
+});
+}
+
+
+function dispTrelloOverdue(t, div, d){
+
+$.getJSON(trelloAPI + t + trelloKey, function(result){
+        $.each(result, function(i, field){
+       //   $("#panel").append(counter + field.name + "<p>");   code to display a list of the name property for each item
+         
+		 if (field.due < d) {
+		 
+		 counter = counter + 1;
+		 }
+		 else {
+		 
+		 }
+		 
+        });
+$(div).val(counter).trigger("change");
+$(div).knob();
+counter = 0;
+
+});
+}
+
+
+
+$(function() {
+ var d1 = new Date();
+ var d2 = d1.toISOString(); 
+
+  // https://api.trello.com/1/boards/8qrZcjWO/lists?fields=name&key=2b9e7d968e4d873a91fa5b00e879f98f&token=75e22aeb246e463aa3939c1edf7de73093ab1d970671136d15bdf9e8d61ddf81
+// api call to find list id. change boards url
+ dispTrelloCount("/1/lists/54b6f314fccc6a04964a722c/cards?lists=open&fields=name&card_fields=name", "#vKnob");
+dispTrelloCount("/1/lists/54b6f31c8465c0b6d6c4971f/cards?lists=open&fields=name&card_fields=name", "#pKnob");
+dispTrelloCount("/1/lists/54e59f47d51ec973a73cab52/cards?lists=open&fields=name&card_fields=name", "#pickup");
+dispTrelloCount("/1/lists/54b706594ac01dba83dcd0a6/cards?lists=open&fields=name&card_fields=name", "#followup");
+//dispTrelloCount("/1/lists/54ed4a8152f71d6cf5e5fff0/cards?lists=open&fields=name&card_fields=name", "#priority");
+//dispTrelloCount("/1/lists/54b6f31fa3e0cbd174387286/cards?lists=open&fields=name&card_fields=name", "#cfollowup");
+//dispTrelloCount("/1/lists/54c6e05e4e230c602fdc92ad/cards?lists=open&fields=name&card_fields=name", "#cancelled");
+dispTrelloCount("/1/lists/54d17c1d2912c6468af8062c/cards?lists=open&fields=name&card_fields=name", "#bundles");
+dispTrelloCount("/1/lists/54d19a084cbe5e96e0093298/cards?lists=open&fields=name&card_fields=name", "#credits");
+dispTrelloCount("/1/lists/54d1a2e407d91a62dadb6550/cards?lists=open&fields=name&card_fields=name", "#orders");
+dispTrelloCount("/1/lists/54d19a1edeb8339514a938a5/cards?lists=open&fields=name&card_fields=name", "#messages");
+dispTrelloOverdue("/1/boards/UpR18qm7/cards?lists=open&fields=due,name", "#bKnob", d2);
+dispTrelloOverdue("/1/boards/8qrZcjWO/cards?lists=open&fields=due,name", "#eKnob", d2);
+
+//  $
+});
+</script>
+ 
+ 
+ 
+ 

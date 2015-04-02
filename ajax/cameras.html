@@ -1,0 +1,50 @@
+<div class="row">
+<div class="col-xs-6" id="cameras1">
+
+<img src="http://mxcam:macxm@139.130.70.31:8001/record/current.jpg" style="max-width:100%;max-height:100%;border: 2px solid black;border-radius: 30px;-moz-border-radius: 30px;-khtml-border-radius: 30px;-webkit-border-radius: 30px;" id="cam1">
+
+
+
+</div>
+<div class="col-xs-6" id="camerasU1"
+</div>
+</div>
+<div class="row">
+<div class="col-xs-6" id="cameras2">
+
+<img src="http://mxcam:macxm@139.130.70.31:8002/record/current.jpg" style="max-width:100%;max-height:100%;border: 2px solid black;border-radius: 30px;-moz-border-radius: 30px;-khtml-border-radius: 30px;-webkit-border-radius: 30px;" id="cam2">
+
+</div>
+<div class="col-xs-6 id="camerasU2">
+</div>
+</div>
+<div class="row">
+<div class="col-xs-6" id="cameras3">
+<img src="http://mxcam:macxm@139.130.70.31:8003/record/current.jpg" style="max-width:100%;max-height:100%;border: 2px solid black;border-radius: 30px;-moz-border-radius: 30px;-khtml-border-radius: 30px;-webkit-border-radius: 30px;" id="cam3">
+</div>
+<div class="col-xs-6" id="camerasU3">
+</div>
+</div>
+
+<!--End Dashboard 2 -->
+<div style="height: 40px;"></div>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+       // sixty second interval (1 second = 1000)
+       window.setInterval("updatelapse();", 1000);
+    });
+ 
+    var url = 'http://mxcam:macxm@139.130.70.31:8001/record/current.jpg?refresh=';
+	var url2 = 'http://mxcam:macxm@139.130.70.31:8002/record/current.jpg?refresh=';
+	var url3 = 'http://mxcam:macxm@139.130.70.31:8003/record/current.jpg?refresh=';
+    var freshno = 0;
+ 
+    function updatelapse()
+    {
+       freshno = freshno + 1;
+       jQuery('#cam1').attr('src',url + freshno);
+	   jQuery('#cam2').attr('src',url2 + freshno);
+	   jQuery('#cam3').attr('src',url3 + freshno);
+	   
+}
+</script>

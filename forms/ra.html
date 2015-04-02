@@ -1,0 +1,438 @@
+
+<!-- CSS -->
+ <link rel="stylesheet" href="../css/datepicker.css">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+
+<link href="css/form.css" rel="stylesheet">
+
+<!-- JavaScript -->
+<script src="../js/wufoo.js"></script>
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/bootstrap-datepicker.js"></script>
+<script src="../scripts/date-en-AU.js"></script>
+<script type="text/javascript">
+            // When the document is ready
+            $(document).ready(function () {
+                
+                $('#Field520').datepicker({
+                    format: "dd/mm/yyyy"
+                });  
+			
+            $("#warningError").hide();
+			$("#title418").hide();
+			$("#Field418").hide();
+			$("#Field418-A").hide();
+				$("#title318").hide();
+			$("#Field318").hide();
+			$("#Field318-A").hide();
+            
+		
+			
+
+    });
+var d1 = Date.today().add({days: -31});
+var d2 = Date.today();
+var d3 = Date.today();
+var d4 = Date.today().toString("dd/MM/yyyy");
+
+        </script>
+
+
+
+
+<body id="public">
+<div id="container" class="ltr col-xs-12">
+
+
+<form id="form30" name="form30" class="wufoo topLabel page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+      action="https://artslet.wufoo.eu/forms/q1oo3t8z1engpeg/#public" target="_self">
+  
+<header id="header" class="info">
+<h2>RA Request</h2>
+<div>Cloc Request Form</div>
+</header>
+
+
+<ul>
+
+<li id="foli1" class="notranslate      ">
+<label class="desc" id="title1" for="Field1">
+Customer Name
+<span id="req_1" class="req">*</span>
+</label>
+<div>
+<input id="Field1" name="Field1" type="text" class="field text medium" value="" maxlength="255" tabindex="1" onkeyup=""       required />
+</div>
+</li>
+<li id="foli111" class="notranslate      ">
+<label class="desc" id="title111" for="Field111">
+Contact Number
+<span id="req_111" class="req">*</span>
+</label>
+<div>
+<input id="Field111" name="Field111" type="text" class="field text medium" value="" maxlength="255" tabindex="2" onkeyup=""       required />
+</div>
+</li>
+<li id="foli523" class="notranslate       ">
+<label class="desc" id="title523" for="Field523">
+Store
+<span id="req_523" class="req">*</span>
+</label>
+<div>
+<select id="Field523" name="Field523" class="field select medium"       tabindex="3" >
+<option value="Select Store" selected="selected">
+Select Store
+</option>
+<option value="Ground Floor" >
+Ground Floor
+</option>
+<option value="Level 1" >
+Level 1
+</option>
+</select>
+</div>
+</li>
+<li id="foli3" class="notranslate      ">
+<label class="desc" id="title3" for="Field3">
+Faulty Product
+<span id="req_3" class="req">*</span>
+</label>
+<div>
+<input id="Field3" name="Field3" type="text" class="field text medium" value="" maxlength="255" tabindex="3" onkeyup=""       required />
+</div>
+</li>
+<li id="foli4" class="notranslate      ">
+<label class="desc" id="title4" for="Field4">
+IMEI Number
+<span id="req_4" class="req">*</span>
+</label>
+<div>
+<input id="Field4" name="Field4" type="text" class="field text medium" value="" maxlength="255" tabindex="4" onkeyup=""       required />
+</div>
+</li>
+<li id="foli316" class="notranslate       ">
+<label class="desc" id="title316" for="Field316">
+Handset Make
+<span id="req_316" class="req">*</span>
+</label>
+<div>
+
+<select id="Field316" name="Field316" class="field select medium"       tabindex="5" >
+<option value="Select" selected="selected">
+Select
+</option>
+<option value="Apple" >
+Apple
+</option>
+<option value="All Other Handsets" >
+All Other Handsets
+</option>
+</select>
+</div>
+</li>
+<li id="foli520" class="notranslate      ">
+<label class="desc" id="title520" for="Field520">
+Date of Purchase
+<span id="req_520" class="req">*</span>
+</label>
+<div>
+<input id="Field520" name="Field520" type="text" class="field text medium" value="" maxlength="255" tabindex="6" onkeyup=""       required />
+</div>
+ <div id="warningError" class="info"><h2>You have entered a purchase date that is too old to be eligible for RA</h>
+ </div>
+</li>
+<li id="foli521" class="notranslate      ">
+<label class="desc" id="title521" for="Field521">
+Date of Return Instore
+<span id="req_521" class="req">*</span>
+</label>
+<div>
+<input id="Field521" name="Field521" type="text" class="field text medium" value="" maxlength="255" tabindex="7" onkeyup=""       required />
+</div>
+</li>
+<li id="foli9" class="notranslate      ">
+<fieldset>
+<![if !IE | (gte IE 8)]>
+<legend id="title9" class="desc">
+Valid Proof of Purchase attached?
+<span id="req_9" class="req">*</span>
+</legend>
+<![endif]>
+<!--[if lt IE 8]>
+<label id="title9" class="desc">
+Valid Proof of Purchase attached?
+<span id="req_9" class="req">*</span>
+</label>
+<![endif]-->
+<div>
+<span>
+<input id="Field9" name="Field9" type="checkbox" class="field checkbox" value="Yes" tabindex="8"     />
+<label class="choice" for="Field9">Yes</label>
+</span>
+</div>
+</fieldset>
+<p class="instruct" id="instruct9"><small>Must be within 30 days of purchase (3 days for Apple), must have store of purchase, must have store ABN</small></p>
+</li>
+<li id="foli116" class="notranslate      ">
+<fieldset>
+<![if !IE | (gte IE 8)]>
+<legend id="title116" class="desc">
+Purchased from Telstra
+<span id="req_116" class="req">*</span>
+</legend>
+<![endif]>
+<!--[if lt IE 8]>
+<label id="title116" class="desc">
+Purchased from Telstra
+<span id="req_116" class="req">*</span>
+</label>
+<![endif]-->
+<div>
+<span>
+<input id="Field116" name="Field116" type="checkbox" class="field checkbox" value="Yes" tabindex="9"     />
+<label class="choice" for="Field116">Yes</label>
+</span>
+</div>
+</fieldset>
+</li>
+<li id="foli216" class="notranslate      ">
+<fieldset>
+<![if !IE | (gte IE 8)]>
+<legend id="title216" class="desc">
+ABN listed on invoice
+<span id="req_216" class="req">*</span>
+</legend>
+<![endif]>
+<!--[if lt IE 8]>
+<label id="title216" class="desc">
+ABN listed on invoice
+<span id="req_216" class="req">*</span>
+</label>
+<![endif]-->
+<div>
+<span>
+<input id="Field216" name="Field216" type="checkbox" class="field checkbox" value="Yes" tabindex="10"     />
+<label class="choice" for="Field216">Yes</label>
+</span>
+</div>
+</fieldset>
+</li>
+<li id="foli318" class="notranslate      ">
+<fieldset>
+<![if !IE | (gte IE 8)]>
+<legend id="title318" class="desc">
+Within 30 days of purchase
+<span id="req_318" class="req">*</span>
+</legend>
+<![endif]>
+<!--[if lt IE 8]>
+<label id="title318" class="desc">
+Within 30 days of purchase
+<span id="req_318" class="req">*</span>
+</label>
+<![endif]-->
+<div>
+<span>
+<input id="Field318" name="Field318" type="checkbox" class="field checkbox" value="Yes" tabindex="11"     />
+<label class="choice" id="Field318-A" for="Field318">Yes</label>
+</span>
+</div>
+</fieldset>
+</li>
+<li id="foli418" class="notranslate      ">
+<fieldset>
+<![if !IE | (gte IE 8)]>
+<legend id="title418" class="desc">
+Within 3 days of purchase
+<span id="req_418" class="req">*</span>
+</legend>
+<![endif]>
+<!--[if lt IE 8]>
+<label id="title418" class="desc">
+Within 3 days of purchase
+<span id="req_418" class="req">*</span>
+</label>
+<![endif]-->
+<div>
+<span>
+<input id="Field418" name="Field418" type="checkbox" class="field checkbox" value="Yes" tabindex="12"     />
+<label class="choice" id="Field418-A" for="Field418">Yes</label>
+</span>
+</div>
+</fieldset>
+</li>
+<li id="foli113"
+class="notranslate      "><label class="desc" id="title113" for="Field113">
+Description of Fault
+<span id="req_113" class="req">*</span>
+</label>
+
+<div>
+<textarea id="Field113"
+name="Field113"
+class="field textarea medium"
+spellcheck="true"
+rows="10" cols="50"
+
+tabindex="13"
+onkeyup=""
+      required  ></textarea>
+
+</div>
+
+<p class="instruct" id="instruct113"><small>Please describe the fault in as much detail as possible and the steps you have taken to try to resolve it</small></p></li>
+<li id="foli6" class="notranslate       ">
+<label class="desc" id="title6" for="Field6">
+Replacement given?
+<span id="req_6" class="req">*</span>
+</label>
+<div>
+<select id="Field6" name="Field6" class="field select medium"       tabindex="14" >
+<option value="Select" selected="selected">
+Select
+</option>
+<option value="Yes" >
+Yes
+</option>
+<option value="No" >
+No
+</option>
+</select>
+</div>
+</li>
+<li id="foli109" class="notranslate      ">
+<label class="desc " id="title109" for="Field109">
+Replacement Invoice Number
+<span id="req_109" class="req">*</span>
+</label>
+<div>
+<input id="Field109" name="Field109" type="text" class="field text nospin medium"  value="" tabindex="15" onkeyup="" required       />
+</div>
+</li>
+<li id="foli114" class="notranslate       ">
+<label class="desc" id="title114" for="Field114">
+Manager's Approval
+<span id="req_114" class="req">*</span>
+</label>
+<div>
+<select id="Field114" name="Field114" class="field select medium"       tabindex="16" >
+<option value="" selected="selected">
+</option>
+<option value="Luke Dunbar" >
+Luke Dunbar
+</option>
+<option value="Caitlin Burrill" >
+Caitlin Burrill
+</option>
+<option value="Emad Wahdan" >
+Emad Wahdan
+</option>
+<option value="Ingres Yap" >
+Ingres Yap
+</option>
+<option value="Chris Perkins" >
+Chris Perkins
+</option>
+</select>
+</div>
+</li> <li class="buttons ">
+<div>
+
+                    <input id="saveForm" name="saveForm" class="btTxt submit"
+    type="submit" value="Submit"
+ /></div>
+</li>
+
+<li class="hide">
+<label for="comment">Do Not Fill This Out</label>
+<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+<input type="hidden" id="idstamp" name="idstamp" value="+RGP2vnzpX21erve6Je4Z5WYG1hOv1UxmfZSqAsgmbY=" />
+</li>
+</ul>
+</form>
+ 
+
+</div><!--container-->
+
+
+	<script type="text/javascript">
+	
+	document.getElementById("Field521").readOnly = true;
+document.getElementById("Field521").value= d4;
+	$('#Field520').on('change',function(){
+
+	var d2 = document.getElementById("Field520").value;
+	var d3 = Date.parseExact(d2, "dd/MM/yyyy");
+
+		if (d1 >= d3) {
+		      
+			  $("#saveForm").hide();
+			  $("#warningError").show();
+			 
+
+		}
+		else {
+			$("#saveForm").show();
+			$("#warningError").hide();
+		}
+	
+	
+	});
+	
+		$('#Field316').on('change',function(){
+		var selection = $(this).val();
+		
+		if (selection == 'Apple'){
+		d1 = Date.today().add({days: -3});
+	    d2 = document.getElementById("Field520").value;
+	    d3 = Date.parseExact(d2, "dd/MM/yyyy");
+			if (d1 >= d3) {
+		      
+			  $("#saveForm").hide();
+			  $("#warningError").show();
+			 
+
+			}
+			else {
+			$("#saveForm").show();
+			$("#warningError").hide();
+			}
+	
+		       $("#Field418").show();
+		$("#Field418-A").show();
+		$("#title418").show();
+			$("#title318").hide();
+			$("#Field318").hide();
+			$("#Field318-A").hide();
+		
+		}
+		else {
+		d1 = Date.today().add({days: -31});
+			if (d1 >= d3) {
+		      
+			  $("#saveForm").hide();
+			  $("#warningError").show();
+			 
+
+		}
+		else {
+			$("#saveForm").show();
+			$("#warningError").hide();
+		};
+	
+		            $("#Field318").show();
+		$("#Field318-A").show();
+		$("#title318").show();
+			$("#title418").hide();
+			$("#Field418").hide();
+			$("#Field418-A").hide();
+
+			
+		
+		}
+	
+ 
+  });  
+ 
+	
+</script>

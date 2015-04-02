@@ -1,0 +1,19 @@
+<?php
+// Establishing Connection with Server by passing server_name, user_id and password as a parameter
+$connection = mysql_connect("au-cdbr-azure-east-a.cloudapp.net", "ba50639d35303f", "16a1b5c9");
+// Selecting Database
+$db = mysql_select_db("artsletaolxui2pf", $connection);
+session_start();// Starting Session
+// Storing Session
+$user_check=$_SESSION['login_user'];
+// SQL Query To Fetch Complete Information Of User
+$ses_sql=mysql_query("select * from login where username='$user_check'", $connection);
+$row = mysql_fetch_assoc($ses_sql);
+
+$role = $row['role'];
+$login_session =$row['fname']. " ". $row['lname'];
+if(!isset($login_session)){
+mysql_close($connection); // Closing Connection
+header('Location: index.php'); // Redirecting To Home Page
+}
+?>
