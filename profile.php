@@ -64,31 +64,33 @@ include('session.php');
 						<a href="#" class="show-sidebar">
 						  <i class="fa fa-bars"></i>
 						</a>
+						
 						<div id="search">
-							<input type="text" placeholder="search"/>
-							<i class="fa fa-search"></i>
-						</div>
+						<!--	<input type="text" placeholder="search"/>
+							<i class="fa fa-search"></i> -->
+						</div> 
 					</div>
+			
 					<div class="col-xs-4 col-sm-8 top-panel-right">
-						<ul class="nav navbar-nav pull-right panel-menu">
+					 <ul class="nav navbar-nav pull-right panel-menu">
 							<li class="hidden-xs">
-								<a href="profile.php" class="modal-link">
+								<!--<a href="#" class="modal-link"> -->
 									<i class="fa fa-bell"></i>
-									<span class="badge">7</span>
-								</a>
+									<span class="badge"></span>
+								</a> 
 							</li>
 							<li class="hidden-xs">
-								<a class="ajax-link" href="ajax/calendar.html">
+								 <!-- <a class="ajax-link" href="#"> -->
 									<i class="fa fa-calendar"></i>
-									<span class="badge">7</span>
+									<span class="badge"></span>
 								</a>
 							</li>
 							<li class="hidden-xs">
-								<a href="ajax/page_messages.html" class="ajax-link">
+								<!-- <a href="#" class="ajax-link"> -->
 									<i class="fa fa-envelope"></i>
-									<span class="badge">7</span>
+									<span class="badge"></span>
 								</a>
-							</li>
+							</li> 
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle account" data-toggle="dropdown">
 									<div class="avatar">
@@ -101,7 +103,7 @@ include('session.php');
 									</div>
 								</a>
 								<ul class="dropdown-menu">
-									<li>
+							<!--		<li>
 										<a href="#">
 											<i class="fa fa-user"></i>
 											<span>Profile</span>
@@ -130,7 +132,7 @@ include('session.php');
 											<i class="fa fa-cog"></i>
 											<span>Settings</span>
 										</a>
-									</li>
+									</li> -->
 									<li>
 										<a href="logout.php">
 											<i class="fa fa-power-off"></i>
@@ -192,7 +194,10 @@ include('session.php');
 					</a>
 					<ul class="dropdown-menu">
 						<li><a class="ajax-link" href="forms/pr2.html"><i class="fa fa-tasks"></i><span class="hidden-xs">  Performance Report</span></a></li>
+						<li><a class="ajax-link" href="forms/cards.html"><i class="fa fa-tasks"></i><span class="hidden-xs">  Business Card Request</span></a></li>
 						<li><a class="ajax-link" href="forms/ra.html"><i class="fa fa-mobile"></i><span class="hidden-xs">  RA Request</span></a></li>
+						<li><a class="ajax-link" href="forms/repair.html" ><i class="fa fa-mobile"></i><span class="hidden-xs">  Repair Manifest</span></a></li>
+						<li><a class="ajax-link" href="forms/interim.html" ><i class="fa fa-mobile"></i><span class="hidden-xs">  Interim Broadband Service</span></a></li>
 						
 			
 					</ul>
@@ -231,4 +236,6 @@ include('session.php');
 <script src="js/bootstrap-datepicker.js"></script>
 <script src="plugins/jQuery-Knob/jquery.knob.js"></script>
 </body>
+
+
 </html>
