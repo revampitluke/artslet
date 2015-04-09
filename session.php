@@ -1,8 +1,8 @@
 <?php
 // Establishing Connection with Server by passing server_name, user_id and password as a parameter
-$connection = mysql_connect("au-cdbr-azure-east-a.cloudapp.net", "ba50639d35303f", "16a1b5c9");
+$connection = mysql_connect("labeeto3.cloudapp.net", "artslet", "dale4152");
 // Selecting Database
-$db = mysql_select_db("artsletaolxui2pf", $connection);
+$db = mysql_select_db("artslet", $connection);
 session_start();// Starting Session
 // Storing Session
 $user_check=$_SESSION['login_user'];

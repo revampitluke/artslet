@@ -179,11 +179,11 @@ $feed->handle_content_type();
 				</li>
 					<li class="dropdown">
 					<a href="#" class="dropdown-toggle">
-							<i class="fa fa-bar-chart-o"></i>
+							<i class="fa fa-newspaper-o"></i>
 						<span class="hidden-xs">News</span>
 					</a>
 					<ul class="dropdown-menu">
-					<li><a class="ajax-link" href="ajax/telstra.php"><i class="fa fa-bar-chart-o"></i><span class="hidden-xs">  Telstra</span></a></li>
+					<li><a class="ajax-link" href="ajax/telstra.php"><i class="fa fa-rss"></i><span class="hidden-xs">  Telstra</span></a></li>
 					</ul>
 					</li>
 				  <?php if ($role == "admin") : ?>
