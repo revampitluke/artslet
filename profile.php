@@ -1,5 +1,22 @@
 <?php
 include('session.php');
+#require_once('../simplepie.inc');
+// For 1.3+:
+require_once('php/autoloader.php');
+ 
+// We'll process this feed with all of the default options.
+$feed = new SimplePie();
+$feed->set_feed_url('http://feeds.feedburner.com/telstra-announcements');
+ 
+// Set which feed to process.
+ 
+// Run SimplePie.
+$feed->init();
+ 
+// This makes sure that the content is sent to the browser as text/html and the UTF-8 character set (since we didn't change it).
+$feed->handle_content_type();
+ 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
