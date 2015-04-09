@@ -194,10 +194,21 @@ include('session.php');
 					</a>
 					<ul class="dropdown-menu">
 						<li><a class="ajax-link" href="forms/pr2.html"><i class="fa fa-tasks"></i><span class="hidden-xs">  Performance Report</span></a></li>
+						<?php if ($role == "admin") : ?>
+						<li><a class="ajax-link" href="forms/review.html"><i class="fa fa-tasks"></i><span class="hidden-xs">  Monthly Performance Review</span></a></li>
 						<li><a class="ajax-link" href="forms/cards.html"><i class="fa fa-tasks"></i><span class="hidden-xs">  Business Card Request</span></a></li>
+						<?php endif; ?>
+						<?php if ($role == "admin") : ?>
 						<li><a class="ajax-link" href="forms/ra.html"><i class="fa fa-mobile"></i><span class="hidden-xs">  RA Request</span></a></li>
-						<li><a class="ajax-link" href="forms/repair.html" ><i class="fa fa-mobile"></i><span class="hidden-xs">  Repair Manifest</span></a></li>
+						<?php endif; ?>
+						<li><a class="ajax-link" href="forms/order.html" ><i class="fa fa-mobile"></i><span class="hidden-xs">  Customer Order </span></a></li>
+						<li><a class="ajax-link" href="forms/foxtel.html" ><i class="fa fa-mobile"></i><span class="hidden-xs">  Foxtel Application</span></a></li>
+						<li><a class="ajax-link" href="forms/fixed.html" ><i class="fa fa-mobile"></i><span class="hidden-xs">  Fixed Line Application</span></a></li>
+						<li><a class="ajax-link" href="forms/bigpond.html" ><i class="fa fa-mobile"></i><span class="hidden-xs">  Bigpond Cable Application</span></a></li>
+						<li><a class="ajax-link" href="forms/move.html" ><i class="fa fa-mobile"></i><span class="hidden-xs">  Move Application</span></a></li>
+						<li><a class="ajax-link" href="forms/repair.html" ><i class="fa fa-mobile"></i><span class="hidden-xs">  Repair Entry</span></a></li>
 						<li><a class="ajax-link" href="forms/interim.html" ><i class="fa fa-mobile"></i><span class="hidden-xs">  Interim Broadband Service</span></a></li>
+						<li><a class="ajax-link" href="forms/messages.html" ><i class="fa fa-mobile"></i><span class="hidden-xs">  Message Staff</span></a></li>
 						
 			
 					</ul>

@@ -8,6 +8,7 @@
  * Beware that DEFAULT may change over time, so you would want to prepare
  * By allowing your storage to expand past 60 characters (255 would be good)
  */
+echo password_hash("dale4152", PASSWORD_DEFAULT);
 ?>
 </body>
 </html>
