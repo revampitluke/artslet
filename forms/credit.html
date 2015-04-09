@@ -1,0 +1,377 @@
+
+<!-- CSS -->
+ <link rel="stylesheet" href="../css/datepicker.css">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+
+<link href="css/form.css" rel="stylesheet">
+
+<!-- JavaScript -->
+<script src="../js/wufoo.js"></script>
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/bootstrap-datepicker.js"></script>
+<script src="../scripts/date-en-AU.js"></script>
+<script src="../js/jquery.form.js"></script>
+<script type="text/javascript">
+$(document).ready(function() { 
+    var options = { 
+         // target element(s) to be updated with server response 
+        beforeSubmit:  showRequest,
+	
+		clearForm: true,        // clear all form fields after successful submit 
+        resetForm: true,
+		type: 'post',
+	
+        // other available options: 
+        //url:       url         // override for form's 'action' attribute 
+        //type:      type        // 'get' or 'post', override for form's 'method' attribute 
+        //dataType:  null        // 'xml', 'script', or 'json' (expected server response type) 
+        //clearForm: true        // clear all form fields after successful submit 
+        //resetForm: true        // reset the form after successful submit 
+ 
+        // $.ajax options can be used here too, for example: 
+        //timeout:   3000 
+    }; 
+ 
+    // bind form using 'ajaxForm' 
+    $('#form18').ajaxForm(options); 
+	   $("#warningError").hide();
+	   $("#successMsg").hide();
+}); 
+ 
+// pre-submit callback 
+function showRequest() { 
+    // formData is an array; here we use $.param to convert it to a string to display it 
+    // but the form plugin does this for you automatically when it submits the data 
+    //var queryString = $.param(formData); 
+	var queryString = $('#Field442').val();
+	var queryString2 = $('#Field444').val();
+	
+    // jqForm is a jQuery object encapsulating the form element.  To access the 
+    // DOM element for the form do this: 
+    // var formElement = jqForm[0]; 
+
+ 
+	if (queryString == 'Luke Dunbar'  && queryString2 == '1111') {
+	
+	$("#successMsg").show();
+	$("#saveForm").hide();
+	return true;
+	}
+	if (queryString == 'Caitlin Burrill'  && queryString2 == '2222') {
+	
+	$("#successMsg").show();
+	$("#saveForm").hide();
+	return true;
+	}
+	if (queryString == 'Ingres Yap'  && queryString2 == '3333') {
+	
+	$("#successMsg").show();
+	$("#saveForm").hide();
+	return true;
+	}
+	if (queryString == 'Emad Wahdan'  && queryString2 == '0741') {
+	
+	$("#successMsg").show();
+	$("#saveForm").hide();
+	return true;
+	}
+	if (queryString == 'Rachel Newman'  && queryString2 == '3333') {
+	
+	$("#successMsg").show();
+	$("#saveForm").hide();
+	return true;
+	}
+	if (queryString == 'Chris Perkins'  && queryString2 == '4444') {
+	
+	$("#successMsg").show();
+	$("#saveForm").hide();
+	return true;
+	}
+	if (queryString == 'Arash Ketabchi'  && queryString2 == '8185') {
+
+	$("#successMsg").show();
+	$("#saveForm").hide();
+	return true;
+	}
+	else {    // here we could return false to prevent the form from being submitted; 
+
+	$("#warningError").show();
+	
+    return false;
+	}		
+} 
+
+ 
+</script> 
+<body id="public">
+
+<div id="container" class="ltr">
+
+
+<form id="form18" name="form18" class="wufoo topLabel page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" 
+      action="https://artslet.wufoo.eu/forms/zirtmm60gl51xz/#public">
+  
+<header id="header" class="info">
+<h2>Account Credit Application</h2>
+<div></div>
+</header>
+
+<ul>
+
+<li id="foli1" class="notranslate      ">
+<label class="desc" id="title1" for="Field1">
+Staff Name
+<span id="req_1" class="req">*</span>
+</label>
+<div>
+<input id="Field1" name="Field1" type="text" class="field text small" value="" maxlength="255" tabindex="1" onkeyup=""       required />
+</div>
+</li>
+<li id="foli438" class="notranslate       ">
+<label class="desc" id="title438" for="Field438">
+Store
+<span id="req_438" class="req">*</span>
+</label>
+<div>
+<select id="Field438" name="Field438" class="field select medium"       tabindex="2" >
+<option value="Please Select" selected="selected">
+Please Select
+</option>
+<option value="Ground Floor" >
+Ground Floor
+</option>
+<option value="Level 1" >
+Level 1
+</option>
+</select>
+</div>
+</li><li id="foli111" class="notranslate section      ">
+<section>
+<h3 id="title111">
+Customer Details
+</h3>
+</section>
+</li>
+<li id="foli112" class="notranslate      ">
+<label class="desc" id="title112" for="Field112">
+Customer Name
+<span id="req_112" class="req">*</span>
+</label>
+<div>
+<input id="Field112" name="Field112" type="text" class="field text medium" value="" maxlength="255" tabindex="3" onkeyup=""       required />
+</div>
+</li>
+<li id="foli440" class="notranslate      ">
+<label class="desc" id="title440" for="Field440">
+Customer Contact Number
+<span id="req_440" class="req">*</span>
+</label>
+<div>
+<input id="Field440" name="Field440" type="text" class="field text medium" value="" maxlength="255" tabindex="4" onkeyup=""       required />
+</div>
+</li>
+<li id="foli114" class="notranslate      ">
+<label class="desc " id="title114" for="Field114">
+Account Number
+<span id="req_114" class="req">*</span>
+</label>
+<div>
+<input id="Field114" name="Field114" type="text" class="field text nospin medium"  value="" tabindex="5" onkeyup="" required       />
+</div>
+</li>
+<li id="foli115" class="notranslate      ">
+<label class="desc " id="title115" for="Field115">
+Service ID
+<span id="req_115" class="req">*</span>
+</label>
+<div>
+<input id="Field115" name="Field115" type="text" class="field text nospin medium"  value="" tabindex="6" onkeyup="" required       />
+</div>
+</li>
+<li id="foli117" class="notranslate       ">
+<label class="desc" id="title117" for="Field117">
+Siebel/Helpdesk Adjustment
+<span id="req_117" class="req">*</span>
+</label>
+<div>
+<select id="Field117" name="Field117" class="field select medium"       tabindex="7" >
+<option value="Select" selected="selected">
+Select
+</option>
+<option value="Siebel" >
+Siebel
+</option>
+<option value="Helpdesk" >
+Helpdesk
+</option>
+</select>
+</div>
+</li><li id="foli118" class="notranslate section      ">
+<section>
+<h3 id="title118">
+Required Information
+</h3>
+</section>
+</li>
+<li id="foli120" class="notranslate      ">
+<label class="desc" id="title120" for="Field120">
+Credit Amount
+<span id="req_120" class="req">*</span>
+</label>
+<div>
+<input id="Field120" name="Field120" type="text" class="field text medium" value="" maxlength="255" tabindex="8" onkeyup=""       required />
+</div>
+</li>
+<li id="foli123" class="notranslate       ">
+<label class="desc" id="title123" for="Field123">
+Reason For Credit
+<span id="req_123" class="req">*</span>
+</label>
+<div>
+<select id="Field123" name="Field123" class="field select medium"       tabindex="9" >
+<option value="Please Select" selected="selected">
+Please Select
+</option>
+<option value="Incorrect Process" >
+Incorrect Process
+</option>
+<option value="Telstra Systems" >
+Telstra Systems
+</option>
+<option value="Customer Misinformed" >
+Customer Misinformed
+</option>
+<option value="Other" >
+Other
+</option>
+</select>
+</div>
+</li>
+<li id="foli124" class="notranslate       ">
+<label class="desc" id="title124" for="Field124">
+Where Issue Originated From
+<span id="req_124" class="req">*</span>
+</label>
+<div>
+<select id="Field124" name="Field124" class="field select medium"       tabindex="10" >
+<option value="Please Select" selected="selected">
+Please Select
+</option>
+<option value="Our Store" >
+Our Store
+</option>
+<option value="Other Retail" >
+Other Retail
+</option>
+<option value="Other Telstra" >
+Other Telstra
+</option>
+<option value="Unknown" >
+Unknown
+</option>
+</select>
+</div>
+</li><li id="foli129" class="notranslate section      ">
+<section>
+<h3 id="title129">
+Supporting Information
+</h3>
+<div id="instruct129">Detail the reason for the credit needing to be applied, including how you calculated or determined the $ amount for the credit (ie $40 plan by 2 months = $80) Please remember, the more detail you are able to provide the faster we will be able to process yourApplication</div>
+</section>
+</li>
+<li id="foli433"
+class="notranslate      "><label class="desc" id="title433" for="Field433">
+
+<span id="req_433" class="req">*</span>
+</label>
+
+<div>
+<textarea id="Field433"
+name="Field433"
+class="field textarea medium"
+spellcheck="true"
+rows="10" cols="50"
+
+tabindex="11"
+onkeyup=""
+      required  >You must enter detailed reasons justifying the credit request</textarea>
+
+</div>
+</li>
+<li id="foli130" class="notranslate      ">
+<label class="desc" id="title130" for="Field130">
+Interaction Number
+<span id="req_130" class="req">*</span>
+</label>
+<div>
+<input id="Field130" name="Field130" type="text" class="field text medium" value="" maxlength="255" tabindex="12" onkeyup=""       required />
+</div>
+</li>
+<li id="foli442" class="notranslate       ">
+<label class="desc" id="title442" for="Field442">
+Manager's Approval
+<span id="req_442" class="req">*</span>
+</label>
+<div>
+<select id="Field442" name="Field442" class="field select medium"       tabindex="13" >
+<option value="Select Manager" selected="selected">
+Select Manager
+</option>
+<option value="Luke Dunbar" >
+Luke Dunbar
+</option>
+<option value="Caitlin Burrill" >
+Caitlin Burrill
+</option>
+<option value="Ingres Yap" >
+Ingres Yap
+</option>
+<option value="Emad Wahdan" >
+Emad Wahdan
+</option>
+<option value="Rachel Newman" >
+Rachel Newman
+</option>
+<option value="Chris Perkins" >
+Chris Perkins
+</option>
+<option value="Arash Ketabchi" >
+Arash Ketabchi
+</option>
+</select>
+</div>
+</li> 
+<li id="foli444" class="notranslate       ">
+<label class="desc" id="title444" for="Field444">
+Security Code
+<span id="req_444" class="req">*</span>
+</label>
+<div>
+ <input type= "password" name="Field444" id="Field444" ></div></li>
+<li class="buttons ">
+<div>
+<div id="warningError" class="info"><h2>Your security code is invalid. Please check with your manager.</h>
+ </div>
+ <div id="successMsg" class="info"><h2>Your credit application has successfully been submitted</h>
+ </div>
+
+                    <input id="saveForm" name="saveForm" class="btTxt submit"
+    type="submit" value="Submit"
+ /></div>
+</li>
+
+<li class="hide">
+<label for="comment">Do Not Fill This Out</label>
+<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+<input type="hidden" id="idstamp" name="idstamp" value="BpdsiKV5UGFkXwAwy2xB/1YXP/DDrXiu/LIfe+FwZAQ=" />
+</li>
+</ul>
+</form>
+
+
+</div><!--container-->
+
+</body>
+
+
+
