@@ -27,7 +27,7 @@ header("location: profile.php");
 		
 
 	</head>
-<body>
+<body style="margin-bottom:60px;">
 <div class="container-fluid">
 	<div id="page-login" class="row">
 		<div class="col-xs-12 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
@@ -55,6 +55,9 @@ header("location: profile.php");
 </div>
 </body>
 
-
+<footer class ="footer" style="position:absolute;bottom:0;width:100%;height:100px;text-align:center;color:white;background: #525252 url(../img/devoops_pattern_b10.png) 0 0 repeat;">
+  <h4>&copy;2015 Artslet Comm Pty Ltd</h4></p>
+  <p>Website developed and maintained by <a href="http://www.trentit.com.au">TrentIT</a>.</p>
+</footer>
 
 </html>
