@@ -15,19 +15,19 @@ $username=$_POST['username'];
 $password=$_POST['password'];
 
 // Establishing Connection with Server by passing server_name, user_id and password as a parameter
-$connection = mysql_connect("au-cdbr-azure-east-a.cloudapp.net", "ba50639d35303f", "16a1b5c9");
+$connection = mysql_connect("labeeto3.cloudapp.net", "artslet", "dale4152");
 // To protect MySQL injection for Security purpose
 $username = stripslashes($username);
 $password = stripslashes($password);
 $username = mysql_real_escape_string($username);
 $password = mysql_real_escape_string($password);
 // Selecting Database
-$db = mysql_select_db("artsletaolxui2pf", $connection);
-// SQL query to fetch information of registerd users and finds user match.
+$db = mysql_select_db("artslet", $connection);
+// SQL query to fetch information of registered users and finds user match.
 $query = mysql_query("select password from login where username='$username'", $connection);
 $rows = mysql_num_rows($query);
 $logindata = mysql_fetch_array($query);
-
+mysql_close($connection);
 
 if ($rows == 0) {
 	$error = "Invalid Username or Password";
@@ -46,7 +46,7 @@ header("location: profile.php");
 	
 	}
 
-mysql_close($connection); // Closing Connection
+ // Closing Connection
 }
 }
 ?>
