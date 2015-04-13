@@ -55,9 +55,9 @@ header("location: profile.php");
 </div>
 </body>
 
-<footer class ="footer" style="position:absolute;bottom:0;width:100%;height:100px;text-align:center;color:white;background: #525252 url(../img/devoops_pattern_b10.png) 0 0 repeat;">
-  <h4>Artslet Comm Pty Ltd &copy;2015 </h4></p>
-  <p>Website developed and maintained by <a href="http://www.trentit.com.au">TrentIT</a>.</p>
+<footer class ="footer" style="position:absolute;bottom:0;width:100%;height:30px;text-align:center;color:white;background: #525252 url(../img/devoops_pattern_b10.png) 0 0 repeat;">
+  <p>Artslet Comm Pty Ltd &copy;2015 <br>
+  Website developed and maintained by <a href="http://www.trentit.com.au">TrentIT</a>.</p>
 </footer>
 
 </html>
