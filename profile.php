@@ -16,7 +16,6 @@ $feed->init();
 // This makes sure that the content is sent to the browser as text/html and the UTF-8 character set (since we didn't change it).
 $feed->handle_content_type();
  
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
