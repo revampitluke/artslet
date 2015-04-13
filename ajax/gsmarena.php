@@ -5,7 +5,7 @@ require_once('../php/autoloader.php');
  
 // We'll process this feed with all of the default options.
 $feed = new SimplePie();
-$feed->set_feed_url('http://www.gsmarena.com/rss-news-reviews.php3');
+$feed->set_feed_url('http://feeds.feedburner.com/telstra-announcements');
  
 // Set which feed to process.
  

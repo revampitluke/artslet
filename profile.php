@@ -184,6 +184,7 @@ $feed->handle_content_type();
 					</a>
 					<ul class="dropdown-menu">
 					<li><a class="ajax-link" href="ajax/telstra.php"><i class="fa fa-rss"></i><span class="hidden-xs">  Telstra</span></a></li>
+					<li><a class="ajax-link" href="ajax/gsmarena.php"><i class="fa fa-rss"></i><span class="hidden-xs">  GSM Arena</span></a></li>
 					</ul>
 					</li>
 				  <?php if ($role == "admin") : ?>
