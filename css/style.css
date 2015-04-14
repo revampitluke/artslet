@@ -318,6 +318,7 @@ a.show-sidebar:hover {
   box-shadow: 0 0 4px #D8D8D8;
   background: transparent;
   margin-bottom: 20px;
+
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -641,10 +642,16 @@ ul.DTTT_dropdown.dropdown-menu > li:hover > a {
   border-bottom: 1px dashed #B6B6B6;
   display: inline-block;
 }
-.box-content .form-group, .devoops-modal-inner .form-group {
-  margin-top:15px;
-  margin-bottom:15px;
+ .form-group, .devoops-modal-inner .form-group {
+
 }
+.box-content {
+  margin-top:0px;
+  margin-bottom:0px;
+  padding-bottom:50px;
+}
+
+
 .show-grid [class^="col-"] {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -2066,6 +2073,7 @@ td.beauty-hover {
   left: 15px;
   color:#ebebeb;
 }
+
 #page-500, #page-login {
   position: absolute;
   height: 100%;
@@ -2083,7 +2091,7 @@ td.beauty-hover {
 }
 #page-login h3 {
   font-size:20px;
-  font-family: 'Righteous', cursive;
+  font-family: 'Arial';
 }
 #page-login .text-right {
   margin-top: 15px;
