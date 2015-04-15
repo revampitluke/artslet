@@ -19,6 +19,7 @@ header("location: profile.php");
 		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
 		<link href="../css/style.css" rel="stylesheet">
+		<link href="../css/artslet.css" rel="stylesheet">
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 				<script src="http://getbootstrap.com/docs-assets/js/html5shiv.js"></script>
@@ -30,19 +31,22 @@ header("location: profile.php");
 <body style="margin-bottom:60px;">
 <div class="container-fluid">
 	<div id="page-login" class="row">
-		<div class="col-xs-12 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-	<img src="img/logo.png">
+		<div class="col-xs-12 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3" >
+	
 			<div class="box">
+			<img src="img/logo.png" style="max-width:100%;max-height:100%">
 				<div class="box-content">
 					<div class="text-center">
-						<h3 class="page-header">My Login</h3>
+					
 			
-<div class="text-left">
+<div>
 <form action="" method="post">
-<label>UserName :</label>
+<label>Username :</label>
 <input id="name" name="username" placeholder="" type="text"><p>
 <label>Password :</label>
-<input id="password" name="password" placeholder="" type="password">
+  <input id="password" name="password" placeholder="" type="password">
+</div>
+<div class="text-center">
 <input name="submit" type="submit" value=" Login ">
 <span><?php echo $error; ?></span>
 </form>
