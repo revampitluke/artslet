@@ -33,9 +33,10 @@ header("location: profile.php");
 	<div id="page-login" class="row">
 		<div class="col-xs-12 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3" >
 	
-			<div class="box">
-			<img src="img/logo.png" style="max-width:100%;max-height:100%">
+			<div class="box" style="border: 1px solid;box-shadow:0 0 0px;">
+			
 				<div class="box-content">
+				<img src="img/logo2.png" style="max-width:100%;max-height:100%">
 					<div class="text-center">
 					
 			

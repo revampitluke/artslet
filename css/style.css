@@ -372,11 +372,11 @@ a.show-sidebar:hover {
 }
 .box-content {
   position: relative;
-  -webkit-border-radius: 0 0 3px 3px;
-  -moz-border-radius: 0 0 3px 3px;
-  border-radius: 0 0 3px 3px;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  border-radius: inherit;
   padding: 15px;
-  background: #FCFCFC;
+  background: #ebebeb url(../img/devoops_pattern_b10.png) 0 0 repeat;
 }
 .box-content.dropbox, .box-content.sortablebox {
   overflow: hidden;

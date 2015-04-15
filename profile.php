@@ -12,7 +12,7 @@ include('session.php');
 		<meta charset="utf-8">
 		<title>My Intranet</title>
 		<meta name="description" content="description">
-		<meta name="author" content="DevOOPS">
+		<meta name="author" content="TrentIT">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="plugins/bootstrap/bootstrap.css" rel="stylesheet">
 		<link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
@@ -61,7 +61,7 @@ include('session.php');
 	<div class="container-fluid expanded-panel">
 		<div class="row">
 			<div id="logo" class="col-xs-12 col-sm-2">
-				<a href="profile.php">Carindale Stores</a>
+				<a href="profile.php">Carindale</a>
 			</div>
 			<div id="top-panel" class="col-xs-12 col-sm-10">
 				<div class="row">
@@ -85,13 +85,13 @@ include('session.php');
 								</a> 
 							</li>
 							<li class="hidden-xs">
-								 <!-- <a class="ajax-link" href="#"> -->
+							<!--	 <a class="ajax-link" href="#"> -->
 									<i class="fa fa-calendar"></i>
 									<span class="badge"></span>
 								</a>
 							</li>
 							<li class="hidden-xs">
-								<!-- <a href="#" class="ajax-link"> -->
+						<!--		 <a href="#" class="ajax-link"> -->
 									<i class="fa fa-envelope"></i>
 									<span class="badge"></span>
 								</a>
@@ -171,9 +171,9 @@ include('session.php');
 						<span class="hidden-xs">News</span>
 					</a>
 					<ul class="dropdown-menu">
-					<li><a class="ajax-link" href="ajax/telstra.php"><i class="fa fa-rss"></i><span class="hidden-xs">  Telstra</span></a></li>
-					<li><a class="ajax-link" href="ajax/gsmarena.php"><i class="fa fa-rss"></i><span class="hidden-xs">  GSM Arena</span></a></li>
-					<li><a class="ajax-link" href="ajax/gizmodo.php"><i class="fa fa-rss"></i><span class="hidden-xs">  Gizmodo</span></a></li>
+					<li><a class="ajax-link" href="ajax/telstra.php"><i class="fa fa-rss"></i><span>  Telstra</span></a></li>
+					<li><a class="ajax-link" href="ajax/gsmarena.php"><i class="fa fa-rss"></i><span>  GSM Arena</span></a></li>
+					<li><a class="ajax-link" href="ajax/gizmodo.php"><i class="fa fa-rss"></i><span>  Gizmodo</span></a></li>
 					</ul>
 					</li>
 				  <?php if ($role == "admin") : ?>
@@ -183,7 +183,7 @@ include('session.php');
 						<span class="hidden-xs">Stats</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/trello.html"><i class="fa fa-bar-chart-o"></i><span class="hidden-xs">  Trello (WIP)</span></a></li>
+						<li><a class="ajax-link" href="ajax/trello.html"><i class="fa fa-bar-chart-o"></i><span >  Trello (WIP)</span></a></li>
 			
 					</ul>
 				</li>
@@ -209,23 +209,23 @@ include('session.php');
 						 <span class="hidden-xs">Forms</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="forms/pr2.html"><i class="fa fa-tasks"></i><span class="hidden-xs">  Performance Report</span></a></li>
+						<li><a class="ajax-link" href="forms/pr2.html"><i class="fa fa-tasks"></i><span >Performance Report</span></a></li>
 						<?php if ($role == "admin") : ?>
-						<li><a class="ajax-link" href="forms/review.html"><i class="fa fa-graduation-cap"></i><span class="hidden-xs">  Monthly Performance Review</span></a></li>
-						<li><a class="ajax-link" href="forms/cards.html"><i class="fa fa-credit-card"></i><span class="hidden-xs">  Business Card Request</span></a></li>
+						<li><a class="ajax-link" href="forms/review.html"><i class="fa fa-graduation-cap"></i><span >Monthly Performance Review</span></a></li>
+						<li><a class="ajax-link" href="forms/cards.html"><i class="fa fa-credit-card"></i><span >Business Card Request</span></a></li>
 						<?php endif; ?>
 						<?php if ($role == "admin") : ?>
-						<li><a class="ajax-link" href="forms/ra.html"><i class="fa fa-mobile"></i><span class="hidden-xs">  RA Request</span></a></li>
+						<li><a class="ajax-link" href="forms/ra.html"><i class="fa fa-mobile"></i><span >RA Request</span></a></li>
 						<?php endif; ?>
-						<li><a class="ajax-link" href="forms/credit.html" ><i class="fa fa-money"></i><span class="hidden-xs">  Credit Request</span></a></li>
-						<li><a class="ajax-link" href="forms/orders.html" ><i class="fa fa-soccer-ball-o"></i><span class="hidden-xs">  Customer Order </span></a></li>
-						<li><a class="ajax-link" href="forms/foxtel.html" ><i class="fa fa-video-camera"></i><span class="hidden-xs">  Foxtel Application</span></a></li>
-						<li><a class="ajax-link" href="forms/fixed.html" ><i class="fa fa-phone"></i><span class="hidden-xs">  Fixed Line Application</span></a></li>
-						<li><a class="ajax-link" href="forms/bigpond.html" ><i class="fa fa-signal"></i><span class="hidden-xs">  Bigpond Cable Application</span></a></li>
-						<li><a class="ajax-link" href="forms/move.html" ><i class="fa fa-motorcycle"></i><span class="hidden-xs">  Move Application</span></a></li>
-						<li><a class="ajax-link" href="forms/repair.html" ><i class="fa fa-road"></i><span class="hidden-xs">  Repair Entry</span></a></li>
-						<li><a class="ajax-link" href="forms/interim.html" ><i class="fa fa-bolt"></i><span class="hidden-xs">  Interim Broadband Service</span></a></li>
-						<li><a class="ajax-link" href="forms/messages.html" ><i class="fa fa-envelope-o"></i><span class="hidden-xs">  Message Staff</span></a></li>
+						<li><a class="ajax-link" href="forms/credit.html" ><i class="fa fa-money"></i><span >Credit Request</span></a></li>
+						<li><a class="ajax-link" href="forms/orders.html" ><i class="fa fa-soccer-ball-o"></i><span >Customer Order </span></a></li>
+						<li><a class="ajax-link" href="forms/foxtel.html" ><i class="fa fa-video-camera"></i><span>Foxtel Application</span></a></li>
+						<li><a class="ajax-link" href="forms/fixed.html" ><i class="fa fa-phone"></i><span >Fixed Line Application</span></a></li>
+						<li><a class="ajax-link" href="forms/bigpond.html" ><i class="fa fa-signal"></i><span>Bigpond Cable Application</span></a></li>
+						<li><a class="ajax-link" href="forms/move.html" ><i class="fa fa-motorcycle"></i><span>Move Application</span></a></li>
+						<li><a class="ajax-link" href="forms/repair.html" ><i class="fa fa-road"></i><span>Repair Entry</span></a></li>
+						<li><a class="ajax-link" href="forms/interim.html" ><i class="fa fa-bolt"></i><span>Interim Broadband Service</span></a></li>
+						<li><a class="ajax-link" href="forms/messages.html" ><i class="fa fa-envelope-o"></i><span>Message Staff</span></a></li>
 						
 			
 					</ul>
