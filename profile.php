@@ -79,8 +79,8 @@ include('session.php');
 					<div class="col-xs-4 col-sm-8 top-panel-right">
 					 <ul class="nav navbar-nav pull-right panel-menu">
 							<li class="hidden-xs">
-								<!--<a href="#" class="modal-link"> -->
-									<i class="fa fa-bell"></i>
+								<a href="ajax/directory.html" class="ajax-link">
+									<i class="fa fa-phone"></i>
 									<span class="badge"></span>
 								</a> 
 							</li>
@@ -108,12 +108,18 @@ include('session.php');
 									</div>
 								</a>
 								<ul class="dropdown-menu">
-							<!--		<li>
-										<a href="#">
+										<li>
+								<a href="ajax/directory.html" class="ajax-link">
+									<i class="fa fa-phone"></i>
+									<span>Directory</span>
+								</a> 
+							</li>
+									<!--<li>
+										<a href="ajax/vcardphp.php" class="ajax-link">
 											<i class="fa fa-user"></i>
-											<span>Profile</span>
+											<span>Send VCard</span>
 										</a>
-									</li>
+									</li> 
 									<li>
 										<a href="ajax/page_messages.html" class="ajax-link">
 											<i class="fa fa-envelope"></i>
@@ -217,6 +223,7 @@ include('session.php');
 						<?php if ($role == "admin") : ?>
 						<li><a class="ajax-link" href="forms/ra.html"><i class="fa fa-mobile"></i><span >RA Request</span></a></li>
 						<?php endif; ?>
+						<li><a class="ajax-link" href="forms/callback.html" ><i class="fa fa-paper-plane-o"></i><span >Manager Callback</span></a></li>
 						<li><a class="ajax-link" href="forms/credit.html" ><i class="fa fa-money"></i><span >Credit Request</span></a></li>
 						<li><a class="ajax-link" href="forms/orders.html" ><i class="fa fa-soccer-ball-o"></i><span >Customer Order </span></a></li>
 						<li><a class="ajax-link" href="forms/foxtel.html" ><i class="fa fa-video-camera"></i><span>Foxtel Application</span></a></li>
@@ -230,7 +237,11 @@ include('session.php');
 			
 					</ul>
 				</li>
-
+				<li class="dropdown">
+					<a href="ajax/paperwork.html" class="ajax-link">
+						<i class="fa fa-file-text-o"></i>
+						 <span class="hidden-xs">Paperwork</span>
+					</a>
 			</ul>
 		</div>
 		
