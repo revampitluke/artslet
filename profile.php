@@ -231,6 +231,7 @@ include('session.php');
 						<li><a class="ajax-link" href="forms/bigpond.html" ><i class="fa fa-signal"></i><span>Bigpond Cable Application</span></a></li>
 						<li><a class="ajax-link" href="forms/move.html" ><i class="fa fa-motorcycle"></i><span>Move Application</span></a></li>
 						<li><a class="ajax-link" href="forms/repair.html" ><i class="fa fa-road"></i><span>Repair Entry</span></a></li>
+						<li><a class="ajax-link" href="forms/npf.html" ><i class="fa fa-space-shuttle"></i><span>New Phone Feeling Dispatch</span></a></li>
 						<li><a class="ajax-link" href="forms/interim.html" ><i class="fa fa-bolt"></i><span>Interim Broadband Service</span></a></li>
 						<li><a class="ajax-link" href="forms/messages.html" ><i class="fa fa-envelope-o"></i><span>Message Staff</span></a></li>
 						
@@ -242,7 +243,21 @@ include('session.php');
 						<i class="fa fa-file-text-o"></i>
 						 <span class="hidden-xs">Paperwork</span>
 					</a>
-			</ul>
+			
+			</li>
+			<li class="dropdown">
+					<a href="#" class="dropdown-toggle">
+						<i class="fa fa-link"></i>
+						 <span class="hidden-xs">Links</span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="https://selfsolve.apple.com/deregister-imessage" target="_blank"><i class="fa fa-apple"></i><span >Deregister iMessage</span></a></li>
+
+						
+			
+					</ul>
+				</li>
+			
 		</div>
 		
 		<!--Start Content-->
