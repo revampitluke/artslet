@@ -77,21 +77,14 @@
 <tr><td>Sarah-Jane Kidd</td><td><a href="tel:0478729339">0478729339</a></td></tr>
 <tr><td>Ahmad Wahdan</td><td><a href="tel:0439582058">0439582058</a></td></tr>
 <tr><td>Trent Brookes</td><td><a href="tel:0414087861">0414087861</a></td></tr>
-<tr><td>Jo Mackinnon</td><td><a href="tel:0432846093">0432846093</a></td></tr></div>
+<tr><td>Jo Mackinnon</td><td><a href="tel:0432846093">0432846093</a></td></tr></table></div>
 <div id = "msgDiv">
-<button type="button" id="submitMsg">Send Message</button>
+<button type="button" id="submitMsg" value="Update" onclick="myCall();">Send Message</button>
 </div>
 
 
 </div>
 <script>
-$(function() {
-      $("#submitMsg").click( function()
-           {
-             alert('button clicked');
-           }
-      );
-});
-</script>
+
 </html>
 
