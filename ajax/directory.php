@@ -1,5 +1,5 @@
 <html>
-
+<script src="../js/jquery-1.9.1.min.js"></script>
 <div class="row">
 	<div id="breadcrumb" class="col-xs-12">
 		<ol class="breadcrumb">
