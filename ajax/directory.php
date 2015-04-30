@@ -84,7 +84,7 @@
 
 
 </div>
-<script>
+
 
 </html>
 
