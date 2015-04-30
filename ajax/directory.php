@@ -39,36 +39,8 @@ session_start();
 <tr><td>Siebel Moves</td><td><a href="tel:1800 231 072">1800 231 072</a></td></tr>
 <tr><td>Foxtel Moves</td><td><a href="tel:1800 308 367">1800 308 367</a></td></tr>
 <tr><td>Bereavement Support</td><td><a href="tel:1800 602 632">1800 602 632</a></td></tr>
-<tr><th>Staff</th><th></th></tr>
-<tr><td>Rachel Newman</td><td><a href="tel:0400888903">0400888903</a></td></tr>
-<tr><td>Luke Dunbar</td><td><a href="#" id="luke">0435371887</a></td></tr>
-<tr><td>Emad Wahdan</td><td><a href="tel:0400300741">0400300741</a></td></tr>
-<tr><td>Caitlin Burrill</td><td><a href="tel:0423793221">0423793221</a></td></tr>
-<tr><td>Arash Ketabshi</td><td><a href="tel:0431067832">0431067832</a></td></tr>
-<tr><td>Ingres Yap</td><td><a href="tel:0499988868">0499988868</a></td></tr>
-<tr><td>John Bennett</td><td><a href="tel:0407847577">0407847577</a></td></tr>
-<tr><td>Julie Bennett</td><td><a href="tel:0419772262">0419772262</a></td></tr>
-<tr><td>Rachael Bennett</td><td><a href="tel:0434611617">0434611617</a></td></tr>
-<tr><td>Liam Hill-Milnes</td><td><a href="tel:0455995556">0455995556</a></td></tr>
-<tr><td>Melanie Turner</td><td><a href="tel:0498129035">0498129035</a></td></tr>
-<tr><td>Anita Baker</td><td><a href="tel:0455886444">0455886444</a></td></tr>
-<tr><td>Dave Jacobs</td><td><a href="tel:0403332373">0403332373</a></td></tr>
-<tr><td>Alisha Vlug</td><td><a href="tel:0439618544">0439618544</a></td></tr>
-<tr><td>Tasha Peck</td><td><a href="tel:0428870779">0428870779</a></td></tr>
-<tr><td>Alex Turley</td><td><a href="tel:0425556750">0425556750</a></td></tr>
-<tr><td>Mahdis Daniali</td><td><a href="tel:0450150575">0450150575</a></td></tr>
-<tr><td>Roma Dayal</td><td><a href="tel:0425431081">0425431081</td></a></tr>
-<tr><td>Kylie Holliday</td><td><a href="tel:0409254514">0409254514</a></td></tr>
-<tr><td>Ross Thurlow</td><td><a href="tel:0422723006">0422723006</a></td></tr>
-<tr><td>Peta Hill-Milnes</td><td><a href="tel:0434824024">0434824024</a></td></tr>
-<tr><td>Prue Roff-Marsh</td><td><a href="tel:0413660546">0413660546</a></td></tr>
-<tr><td>Corneels de Waard</td><td><a href="tel:0477777495">0477777495</a></td></tr>
-<tr><td>Elizabeth Anger</td><td><a href="tel:0416190870">0416190870</a></td></tr>
-<tr><td>Sarah-Jane Kidd</td><td><a href="tel:0478729339">0478729339</a></td></tr>
-<tr><td>Ahmad Wahdan</td><td><a href="tel:0439582058">0439582058</a></td></tr>
-<tr><td>Trent Brookes</td><td><a href="tel:0414087861">0414087861</a></td></tr>
-<tr><td>Jo Mackinnon</td><td><a href="tel:0432846093">0432846093</a></td></tr></table></div>
-<div id = "msgDiv">
+</table></div>
+<div id = "msgDiv" class="col-xs-10">
 <form id="contactList">
 <select id="phonenumber" name="phonenumber">
 <?php
@@ -87,10 +59,10 @@ mysql_close($connection);
 
 ?>
 
-</select>
+</select><br>
 
 
-<textarea name="Message" id="MessageW" rows="10" cols="20">Message</textarea>
+<textarea name="Message" id="MessageW" rows="10" cols="20" placeholder="Type your message here"></textarea><br>
 <input type="submit" value="Send" />
 </form>
 </div>
@@ -134,6 +106,7 @@ $("#contactList").submit(function(event){
     request.done(function (response, textStatus, jqXHR){
         // Log a message to the console
         console.log("Hooray, it worked!");
+	$('#MessageW').val('Message sent!');
     });
 
     // Callback handler that will be called on failure
