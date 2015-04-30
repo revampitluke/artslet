@@ -91,7 +91,7 @@ session_start();
 								</a>
 							</li>
 							<li class="hidden-xs">
-						<!--		 <a href="#" class="ajax-link"> -->
+								 <a href="ajax/message.php" class="ajax-link"> 
 									<i class="fa fa-envelope"></i>
 									<span class="badge"></span>
 								</a>
@@ -114,6 +114,7 @@ session_start();
 									<span>Directory</span>
 								</a> 
 							</li>
+							<li><a href="ajax/message.php" class="ajax-link"><i class="fa fa-envelope"></i><span>Send Message</span></a></li>
 									<!--<li>
 										<a href="ajax/vcardphp.php" class="ajax-link">
 											<i class="fa fa-user"></i>
