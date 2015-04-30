@@ -62,7 +62,84 @@
 <tr><td>Jo Mackinnon</td><td><a href="tel:0432846093">0432846093</a></td></tr></table></div>
 <div id = "msgDiv">
 <form id="contactList">
-<input type ="number" id="phonenumber" placeholder="614" />
+<select id="phonenumber" name="phonenumber">
+<option value="ALEX TURLEY" >
+ALEX TURLEY
+</option>
+<option value="ALISHA VLUG" >
+ALISHA VLUG
+</option>
+<option value="ANDRE FISHER" >
+ANDRE FISHER
+</option>
+<option value="ANITA BAKER" >
+ANITA BAKER
+</option>
+<option value="ARASH KETABSHI" >
+ARASH KETABSHI
+</option>
+<option value="CAITLIN BURRILL" >
+CAITLIN BURRILL
+</option>
+<option value="CHRIS PERKINS" >
+CHRIS PERKINS
+</option>
+<option value="CHRIS THOMSON" >
+CHRIS THOMSON
+</option>
+<option value="CORNEELS DE WAARD" >
+CORNEELS DE WAARD
+</option>
+<option value="DAVE JACOBS" >
+DAVE JACOBS
+</option>
+
+<option value="ISA D" >
+ISA D
+</option>
+
+<option value="KRYSTAL FRANKS" >
+KRYSTAL FRANKS
+</option>
+<option value="KYLIE HOLLIDAY" >
+KYLIE HOLLIDAY
+</option>
+<option value="LIAM HILL-MILNES" >
+LIAM HILL-MILNES
+</option>
+<option value="MAHDIS DANIALI" >
+MAHDIS DANIALI
+</option>
+<option value="MELANIE TURNER" >
+MELANIE TURNER
+</option>
+<option value="RACHAEL BENNETT" >
+RACHAEL BENNETT
+</option>
+<option value="RHIANNAN RUELCKE" >
+RHIANNAN RUELCKE
+</option>
+<option value="ROMA DAYAL" >
+ROMA DAYAL
+</option>
+<option value="ROSS THURLOW" >
+ROSS THURLOW
+</option>
+<option value="SAM DICKSON" >
+SAM DICKSON
+</option>
+<option value="TASHA PECK" >
+TASHA PECK
+</option>
+<option value="61414087861" >
+TRENT BROOKES
+</option>
+<option value="PETA HILL-MILNES" >
+PETA HILL-MILNES
+</option>
+</select>
+
+
 <textarea name="Message" id="MessageW" rows="10" cols="20">Message</textarea>
 <input type="submit" value="Send" />
 </form>
