@@ -1,18 +1,4 @@
-<?php
-
-require '../src/whatsprot.class.php';
-
-$username = "61455055532";
-$nickname = "Intranet";
-$password = "aPiTXsYOWc8VbOnhDHXPpEc4adE=";
-$debug = true;
-
-$w = new WhatsProt($username, $nickname, $debug);
-$w->connect();
-$w->loginWithPassword($password);
-
-?>
-
+<html>
 
 <div class="row">
 	<div id="breadcrumb" class="col-xs-12">
@@ -73,8 +59,19 @@ $w->loginWithPassword($password);
 <tr><td>Ahmad Wahdan</td><td><a href="tel:0439582058">0439582058</a></td></tr>
 <tr><td>Trent Brookes</td><td><a href="tel:0414087861">0414087861</a></td></tr>
 <tr><td>Jo Mackinnon</td><td><a href="tel:0432846093">0432846093</a></td></tr>
+<button type="button" id="submitMsg">Send Message</button>
+
 
 
 </div>
-
+<script>
+$(function() {
+      $("#submitMsg").click( function()
+           {
+             alert('button clicked');
+           }
+      );
+});
+</script>
+</html>
 
