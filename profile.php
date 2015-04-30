@@ -252,7 +252,7 @@ include('session.php');
 					</a>
 					<ul class="dropdown-menu">
 						<li><a href="https://selfsolve.apple.com/deregister-imessage" target="_blank"><i class="fa fa-apple"></i><span >Deregister iMessage</span></a></li>
-						<li><a id="whatsid" target="_blank" href="#"><i class="fa fa-apple"></i><span >Test</span></a></li>
+						<li><a id="whatsid" target="_blank" href="ajax/whats.php" class="ajax-link"><i class="fa fa-apple"></i><span >Test</span></a></li>
 
 						
 			
@@ -293,20 +293,6 @@ include('session.php');
 </body>
 
 
-<script>
-$(document).ready(function(){
-    $('#whatsid').click(function(){
-        
-        var ajaxurl = 'ajax/whats.php',
-        data =  {'action'};
-        $.post(ajaxurl, data, function (response) {
-            // Response div goes here.
-            alert("action performed successfully");
-        });
-    });
-
-});
-</script>
 
 
 </html>
