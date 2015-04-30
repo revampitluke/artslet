@@ -11,8 +11,8 @@ header("location: profile.php");
 	<head>
 		<meta charset="utf-8">
 		<title>My Intranet</title>
-		<meta name="description" content="description">
-		<meta name="author" content="Evgeniya">
+		<meta name="description" content="Telstra Stores Carindale Intranet">
+		<meta name="author" content="TrentIT">
 		<meta name="keyword" content="keywords">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="../plugins/bootstrap/bootstrap.css" rel="stylesheet">

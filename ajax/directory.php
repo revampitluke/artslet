@@ -1,23 +1,5 @@
 <html>
 <script src="../js/jquery-1.9.1.min.js"></script>
-<script>
-	
-	function myCall() {
-		var request = $.ajax({
-			url: "whats.php",
-			type: "GET",			
-			dataType: "html"
-		});
-
-		request.done(function(msg) {
-			$("#msgDiv").html(msg);			
-		});
-
-		request.fail(function(jqXHR, textStatus) {
-			alert( "Request failed: " + textStatus );
-		});
-	}
-</script>
 
 <div class="row">
 	<div id="breadcrumb" class="col-xs-12">
@@ -79,12 +61,76 @@
 <tr><td>Trent Brookes</td><td><a href="tel:0414087861">0414087861</a></td></tr>
 <tr><td>Jo Mackinnon</td><td><a href="tel:0432846093">0432846093</a></td></tr></table></div>
 <div id = "msgDiv">
-<button type="button" id="submitMsg" value="Update" onclick="myCall();">Send Message</button>
+<form id="contactList">
+<input type ="number" id="phonenumber" placeholder="614" />
+<textarea name="Message" id="MessageW" rows="10" cols="20">Message</textarea>
+<input type="submit" value="Send" />
+</form>
 </div>
 
 
 </div>
 
+<script>
+$( document ).ready(function() {
+var request;
+
+// Bind to the submit event of our form
+$("#contactList").submit(function(event){
+
+    // Abort any pending request
+    if (request) {
+        request.abort();
+    }
+    // setup some local variables
+    var $form = $(this);
+
+    // Let's select and cache all the fields
+    var $inputs = $form.find("input, select, button, textarea");
+
+    // Serialize the data in the form
+    var serializedData = $form.serialize();
+
+    // Let's disable the inputs for the duration of the Ajax request.
+    // Note: we disable elements AFTER the form data has been serialized.
+    // Disabled form elements will not be serialized.
+    $inputs.prop("disabled", true);
+
+    // Fire off the request to /form.php
+    request = $.ajax({
+        url: "ajax/whats.php",
+        type: "post",
+        data: serializedData
+    });
+
+    // Callback handler that will be called on success
+    request.done(function (response, textStatus, jqXHR){
+        // Log a message to the console
+        console.log("Hooray, it worked!");
+    });
+
+    // Callback handler that will be called on failure
+    request.fail(function (jqXHR, textStatus, errorThrown){
+        // Log the error to the console
+        console.error(
+            "The following error occurred: "+
+            textStatus, errorThrown
+        );
+    });
+
+    // Callback handler that will be called regardless
+    // if the request failed or succeeded
+    request.always(function () {
+        // Reenable the inputs
+        $inputs.prop("disabled", false);
+    });
+
+    // Prevent default posting of form
+    event.preventDefault();
+});	
+
+});
+</script>  
 
 </html>
 

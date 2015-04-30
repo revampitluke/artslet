@@ -1,5 +1,8 @@
 <?php
 
+$message = $_POST['Message'];
+$target = $_POST['phonenumber'];
+
 require '../src/whatsprot.class.php';
 
 $username = "61455055532";
@@ -10,8 +13,9 @@ $debug = true;
 $w = new WhatsProt($username, $nickname, $debug);
 $w->connect();
 $w->loginWithPassword($password);
-$target = "61414087861";
-$message = "Test Message";
+//$target = "61414087861";
+// $message = "Test";
 
 $w->sendMessage($target, $message);
+
 ?>
