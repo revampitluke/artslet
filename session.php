@@ -12,6 +12,8 @@ $row = mysql_fetch_assoc($ses_sql);
 
 $role = $row['role'];
 $login_session =$row['fname']. " ". $row['lname'];
+$_SESSION["name"] = $login_session;
+
 if(!isset($login_session)){
 mysql_close($connection); // Closing Connection
 header('Location: index.php'); // Redirecting To Home Page

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $message = $_POST['Message'];
 $target = $_POST['phonenumber'];
 
@@ -15,7 +15,7 @@ $w->connect();
 $w->loginWithPassword($password);
 //$target = "61414087861";
 // $message = "Test";
-
-$w->sendMessage($target, $message);
+$amended = $_SESSION["name"] . " : " . $message;
+$w->sendMessage($target, $amended);
 
 ?>

@@ -1,12 +1,7 @@
 <?php
-$connection = mysql_connect("labeeto3.cloudapp.net", "artslet", "dale4152");
-$db = mysql_select_db("artslet", $connection);
-// SQL query to fetch information of registered users and finds user match.
-$query = mysql_query("select fname,lname,contact from login", $connection);
-$rows = mysql_num_rows($query);
-$staff = mysql_fetch_array($query);
-mysql_close($connection);
+session_start();
 ?>
+
 
 <html>
 <script src="../js/jquery-1.9.1.min.js"></script>
@@ -24,7 +19,9 @@ mysql_close($connection);
 <div id="dashboard-header" class="row">
 	<div class="col-xs-10">
 		<h3>Directory</h3><br>
-		<p>Test Data <?=$staff[0][0]?></p>
+
+
+</p>
 <table class="table table-hover">
 <tr>
 <th><h4>Name</h4></th>
@@ -74,80 +71,22 @@ mysql_close($connection);
 <div id = "msgDiv">
 <form id="contactList">
 <select id="phonenumber" name="phonenumber">
-<option value="ALEX TURLEY" >
-ALEX TURLEY
-</option>
-<option value="ALISHA VLUG" >
-ALISHA VLUG
-</option>
-<option value="ANDRE FISHER" >
-ANDRE FISHER
-</option>
-<option value="ANITA BAKER" >
-ANITA BAKER
-</option>
-<option value="ARASH KETABSHI" >
-ARASH KETABSHI
-</option>
-<option value="CAITLIN BURRILL" >
-CAITLIN BURRILL
-</option>
-<option value="CHRIS PERKINS" >
-CHRIS PERKINS
-</option>
-<option value="CHRIS THOMSON" >
-CHRIS THOMSON
-</option>
-<option value="CORNEELS DE WAARD" >
-CORNEELS DE WAARD
-</option>
-<option value="DAVE JACOBS" >
-DAVE JACOBS
-</option>
+<?php
+$connection = mysql_connect("labeeto3.cloudapp.net", "artslet", "dale4152");
+$db = mysql_select_db("artslet", $connection);
+// SQL query to fetch information of registered users and finds user match.
+$query = mysql_query("select fname,lname,contact from login", $connection);
+$rows = mysql_num_rows($query);
+//$staff = mysql_fetch_array($query);
 
-<option value="ISA D" >
-ISA D
-</option>
+while($staff = mysql_fetch_array($query)){
+	echo '<option value="' . $staff['contact']. '">' . $staff['fname']. ' ' . $staff['lname'];
+	
+}
+mysql_close($connection);
 
-<option value="KRYSTAL FRANKS" >
-KRYSTAL FRANKS
-</option>
-<option value="KYLIE HOLLIDAY" >
-KYLIE HOLLIDAY
-</option>
-<option value="LIAM HILL-MILNES" >
-LIAM HILL-MILNES
-</option>
-<option value="MAHDIS DANIALI" >
-MAHDIS DANIALI
-</option>
-<option value="MELANIE TURNER" >
-MELANIE TURNER
-</option>
-<option value="RACHAEL BENNETT" >
-RACHAEL BENNETT
-</option>
-<option value="RHIANNAN RUELCKE" >
-RHIANNAN RUELCKE
-</option>
-<option value="ROMA DAYAL" >
-ROMA DAYAL
-</option>
-<option value="ROSS THURLOW" >
-ROSS THURLOW
-</option>
-<option value="SAM DICKSON" >
-SAM DICKSON
-</option>
-<option value="TASHA PECK" >
-TASHA PECK
-</option>
-<option value="61414087861" >
-TRENT BROOKES
-</option>
-<option value="PETA HILL-MILNES" >
-PETA HILL-MILNES
-</option>
+?>
+
 </select>
 
 

@@ -1,6 +1,6 @@
 <?php
 include('session.php');
-
+session_start();
 ?>
 
 
@@ -104,7 +104,7 @@ include('session.php');
 									<i class="fa fa-angle-down pull-right"></i>
 									<div class="user-mini pull-right">
 										<span class="welcome">Welcome,</span>
-										<span><?php echo $login_session; ?></span>
+										<span><?php echo ($_SESSION["name"]); ?></span>
 									</div>
 								</a>
 								<ul class="dropdown-menu">
@@ -252,7 +252,6 @@ include('session.php');
 					</a>
 					<ul class="dropdown-menu">
 						<li><a href="https://selfsolve.apple.com/deregister-imessage" target="_blank"><i class="fa fa-apple"></i><span >Deregister iMessage</span></a></li>
-						<li><a id="whatsid" target="_blank" href="ajax/whats.php" class="ajax-link"><i class="fa fa-apple"></i><span >Test</span></a></li>
 
 						
 			
