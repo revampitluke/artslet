@@ -1,5 +1,24 @@
 <html>
 <script src="../js/jquery-1.9.1.min.js"></script>
+<script>
+	
+	function myCall() {
+		var request = $.ajax({
+			url: "whats.php",
+			type: "GET",			
+			dataType: "html"
+		});
+
+		request.done(function(msg) {
+			$("#msgDiv").html(msg);			
+		});
+
+		request.fail(function(jqXHR, textStatus) {
+			alert( "Request failed: " + textStatus );
+		});
+	}
+</script>
+
 <div class="row">
 	<div id="breadcrumb" class="col-xs-12">
 		<ol class="breadcrumb">
@@ -58,9 +77,10 @@
 <tr><td>Sarah-Jane Kidd</td><td><a href="tel:0478729339">0478729339</a></td></tr>
 <tr><td>Ahmad Wahdan</td><td><a href="tel:0439582058">0439582058</a></td></tr>
 <tr><td>Trent Brookes</td><td><a href="tel:0414087861">0414087861</a></td></tr>
-<tr><td>Jo Mackinnon</td><td><a href="tel:0432846093">0432846093</a></td></tr>
+<tr><td>Jo Mackinnon</td><td><a href="tel:0432846093">0432846093</a></td></tr></div>
+<div id = "msgDiv">
 <button type="button" id="submitMsg">Send Message</button>
-
+</div>
 
 
 </div>
