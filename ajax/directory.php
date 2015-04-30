@@ -1,3 +1,13 @@
+<?php
+$connection = mysql_connect("labeeto3.cloudapp.net", "artslet", "dale4152");
+$db = mysql_select_db("artslet", $connection);
+// SQL query to fetch information of registered users and finds user match.
+$query = mysql_query("select fname,lname,contact from login", $connection);
+$rows = mysql_num_rows($query);
+$staff = mysql_fetch_array($query);
+mysql_close($connection);
+?>
+
 <html>
 <script src="../js/jquery-1.9.1.min.js"></script>
 
@@ -14,6 +24,7 @@
 <div id="dashboard-header" class="row">
 	<div class="col-xs-10">
 		<h3>Directory</h3><br>
+		<p>Test Data <?=$staff[0][0]?></p>
 <table class="table table-hover">
 <tr>
 <th><h4>Name</h4></th>
