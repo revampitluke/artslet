@@ -1,3 +1,19 @@
+<?php
+
+require '../src/whatsprot.class.php';
+
+$username = "61455055532";
+$nickname = "Intranet";
+$password = "aPiTXsYOWc8VbOnhDHXPpEc4adE=";
+$debug = true;
+
+$w = new WhatsProt($username, $nickname, $debug);
+$w->connect();
+$w->loginWithPassword($password);
+
+?>
+
+
 <div class="row">
 	<div id="breadcrumb" class="col-xs-12">
 		<ol class="breadcrumb">
@@ -30,7 +46,7 @@
 <tr><td>Bereavement Support</td><td><a href="tel:1800 602 632">1800 602 632</a></td></tr>
 <tr><th>Staff</th><th></th></tr>
 <tr><td>Rachel Newman</td><td><a href="tel:0400888903">0400888903</a></td></tr>
-<tr><td>Luke Dunbar</td><td><a href="tel:0435371887">0435371887</a></td></tr>
+<tr><td>Luke Dunbar</td><td><a href="#" id="luke">0435371887</a></td></tr>
 <tr><td>Emad Wahdan</td><td><a href="tel:0400300741">0400300741</a></td></tr>
 <tr><td>Caitlin Burrill</td><td><a href="tel:0423793221">0423793221</a></td></tr>
 <tr><td>Arash Ketabshi</td><td><a href="tel:0431067832">0431067832</a></td></tr>

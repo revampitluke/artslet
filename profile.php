@@ -79,7 +79,7 @@ include('session.php');
 					<div class="col-xs-4 col-sm-8 top-panel-right">
 					 <ul class="nav navbar-nav pull-right panel-menu">
 							<li class="hidden-xs">
-								<a href="ajax/directory.html" class="ajax-link">
+								<a href="ajax/directory.php" class="ajax-link">
 									<i class="fa fa-phone"></i>
 									<span class="badge"></span>
 								</a> 
@@ -109,7 +109,7 @@ include('session.php');
 								</a>
 								<ul class="dropdown-menu">
 										<li>
-								<a href="ajax/directory.html" class="ajax-link">
+								<a href="ajax/directory.php" class="ajax-link">
 									<i class="fa fa-phone"></i>
 									<span>Directory</span>
 								</a> 
@@ -252,6 +252,7 @@ include('session.php');
 					</a>
 					<ul class="dropdown-menu">
 						<li><a href="https://selfsolve.apple.com/deregister-imessage" target="_blank"><i class="fa fa-apple"></i><span >Deregister iMessage</span></a></li>
+						<li><a href="#" target="_blank" id="whats"><i class="fa fa-apple"></i><span >Test</span></a></li>
 
 						
 			
@@ -290,6 +291,22 @@ include('session.php');
 <script src="js/bootstrap-datepicker.js"></script>
 <script src="plugins/jQuery-Knob/jquery.knob.js"></script>
 </body>
+
+
+<script>
+$(document).ready(function(){
+    $('#whats').click(function(){
+        
+        var ajaxurl = 'ajax/whats.php',
+        data =  {'action'};
+        $.post(ajaxurl, data, function (response) {
+            // Response div goes here.
+            alert("action performed successfully");
+        });
+    });
+
+});
+</script>
 
 
 </html>
