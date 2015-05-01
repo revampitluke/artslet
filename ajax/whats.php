@@ -15,7 +15,7 @@ $w->connect();
 $w->loginWithPassword($password);
 //$target = "61414087861";
 // $message = "Test";
-$amended = $_SESSION["name"] . " : " . $message;
+$amended = "[NoReply] " . $_SESSION["name"] . " : " . $message;
 $w->sendMessage($target, $amended);
 
 ?>
