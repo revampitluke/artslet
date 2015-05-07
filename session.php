@@ -13,6 +13,8 @@ $row = mysql_fetch_assoc($ses_sql);
 $role = $row['role'];
 $login_session =$row['fname']. " ". $row['lname'];
 $_SESSION["name"] = $login_session;
+$_SESSION["role"] = $role;
+
 
 if(!isset($login_session)){
 mysql_close($connection); // Closing Connection

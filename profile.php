@@ -1,6 +1,16 @@
 <?php
 include('session.php');
 session_start();
+
+$valid_session = isset($_SESSION['id']) ? $_SESSION['id'] === session_id() : FALSE;
+if (!$valid_session) {
+   header('Location: index.php');
+   exit();
+}
+//if (isset($_SESSION["name"])) {
+//header('Location: index.php'); // Redirecting To Home Page
+//}
+
 ?>
 
 
@@ -183,7 +193,7 @@ session_start();
 					<li><a class="ajax-link" href="ajax/gizmodo.php"><i class="fa fa-rss"></i><span>  Gizmodo</span></a></li>
 					</ul>
 					</li>
-				  <?php if ($role == "admin") : ?>
+				  <?php if ($_SESSION["role"] == "admin") : ?>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle">
 						<i class="fa fa-bar-chart-o"></i>
@@ -195,7 +205,7 @@ session_start();
 					</ul>
 				</li>
 				<?php endif; ?>
-				  <?php if ($role == "admin") : ?>
+				  <?php if ($_SESSION["role"] == "admin") : ?>
   	<li class="dropdown">
 					<a href="#" class="dropdown-toggle">
 						<i class="fa fa-desktop"></i>
@@ -218,13 +228,13 @@ session_start();
 					<ul class="dropdown-menu">
 						<li><a class="ajax-link" href="forms/pr2.html"><i class="fa fa-tasks"></i><span >Performance Report</span></a></li>
 						
-						<?php if ($role == "admin") : ?>
+						<?php if ($_SESSION["role"] == "admin") : ?>
 						<li><a class="ajax-link" href="forms/review.html"><i class="fa fa-graduation-cap"></i><span >Monthly Performance Review</span></a></li>
 						<li><a class="ajax-link" href="forms/cards.html"><i class="fa fa-credit-card"></i><span >Business Card Request</span></a></li>
 <li><a class="ajax-link" href="forms/uniform.html"><i class="fa fa-shirtsinbulk"></i><span >Uniform Order</span></a></li>						
 <?php endif; ?>
 						
-						<?php if ($role == "admin") : ?>
+						<?php if ($_SESSION["role"] == "admin") : ?>
 						<li><a class="ajax-link" href="forms/ra.html"><i class="fa fa-mobile"></i><span >RA Request</span></a></li>
 						<?php endif; ?>
 						<li><a class="ajax-link" href="forms/callback.html" ><i class="fa fa-paper-plane-o"></i><span >Manager Callback</span></a></li>

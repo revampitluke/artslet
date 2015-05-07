@@ -38,6 +38,9 @@ else {
 	
 if (password_verify($password, $hash)) {
     $_SESSION['login_user']=$username; // Initializing Session
+
+$_SESSION['id'] = session_id();
+
 header("location: profile.php");
 } else {
     $error = "Invalid Username or Password.";
