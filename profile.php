@@ -221,8 +221,9 @@ session_start();
 						<?php if ($role == "admin") : ?>
 						<li><a class="ajax-link" href="forms/review.html"><i class="fa fa-graduation-cap"></i><span >Monthly Performance Review</span></a></li>
 						<li><a class="ajax-link" href="forms/cards.html"><i class="fa fa-credit-card"></i><span >Business Card Request</span></a></li>
-						<?php endif; ?>
-						<li><a class="ajax-link" href="forms/uniform.html"><i class="fa fa-shirtsinbulk"></i><span >Uniform Order</span></a></li>
+<li><a class="ajax-link" href="forms/uniform.html"><i class="fa fa-shirtsinbulk"></i><span >Uniform Order</span></a></li>						
+<?php endif; ?>
+						
 						<?php if ($role == "admin") : ?>
 						<li><a class="ajax-link" href="forms/ra.html"><i class="fa fa-mobile"></i><span >RA Request</span></a></li>
 						<?php endif; ?>
@@ -254,8 +255,8 @@ session_start();
 						 <span class="hidden-xs">Links</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="https://selfsolve.apple.com/deregister-imessage" target="_blank"><i class="fa fa-apple"></i><span >Deregister iMessage</span></a></li>
-
+						<li><a href="https://selfsolve.apple.com/deregister-imessage" target="_blank"><i class="fa fa-apple"></i><span>Deregister iMessage</span></a></li>
+						<li><a href="http://netpro.ultimatefreehost.in" target="_blank"><i class="fa fa-paw"></i><span>NPS Tool</span></a></li>
 						
 			
 					</ul>

@@ -13,9 +13,17 @@ $debug = true;
 $w = new WhatsProt($username, $nickname, $debug);
 $w->connect();
 $w->loginWithPassword($password);
-//$target = "61414087861";
 // $message = "Test";
-$amended = "[NoReply] " . $_SESSION["name"] . " : " . $message;
+$amended = $_SESSION["name"] . " (noreply) " . "\n " . $message;
+//$w->sendMessage($target, $amended);
+//$w->sendGetGroups($message);
+
+
+
+
+
 $w->sendMessage($target, $amended);
+
+
 
 ?>
