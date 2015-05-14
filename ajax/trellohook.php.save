@@ -1,6 +1,7 @@
 <?php
 session_start();
 $message = $_POST['Message'];
+$amended = explode(
 $target = $_POST['phonenumber'];
 $store1 = "61435371887-1416954725";
 $store2 = "61435371887-1416960819";
@@ -16,7 +17,7 @@ $w = new WhatsProt($username, $nickname, $debug);
 $w->connect();
 $w->loginWithPassword($password);
 // $message = "Test";
-$amended = $_SESSION["name"] . " (noreply) " . "\n " . $message;
+//$amended = $_SESSION["name"] . " (noreply) " . "\n " . $message;
 //$w->sendMessage($target, $amended);
 //$w->sendGetGroups($message);
 
@@ -27,7 +28,7 @@ $w->sendMessage($store1, $amended);
 $w->sendMessage($store2, $amended);
 
 } else {
-$w->sendMessage($target, $amended);
+$w->sendMessage($target, $message);
 }
 
 

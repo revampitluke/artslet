@@ -11,7 +11,7 @@ $ses_sql=mysql_query("select * from login where username='$user_check'", $connec
 $row = mysql_fetch_assoc($ses_sql);
 
 $role = $row['role'];
-$login_session =$row['fname']. " ". $row['lname'];
+$login_session =$row['name'];
 $_SESSION["name"] = $login_session;
 $_SESSION["role"] = $role;
 

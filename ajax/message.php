@@ -25,8 +25,11 @@ session_start();
 <div id = "msgDiv" class="col-xs-10">
 <form id="contactList">
 <select id="phonenumber" name="phonenumber">
+<?php if ($_SESSION["role"] == "admin") : ?>
 <option value="61435371887-1416954725">Ground Floor(Group)</option>
 <option value="61435371887-1416960819">Level 1 (Group)</option>
+<option value="all">Both Stores (Groups)</option>
+<?php endif; ?>
 <?php
 $connection = mysql_connect("labeeto3.cloudapp.net", "artslet", "dale4152");
 $db = mysql_select_db("artslet", $connection);

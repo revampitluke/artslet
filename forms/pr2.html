@@ -91,6 +91,9 @@ MELANIE TURNER
 <option value="RACHAEL BENNETT" >
 RACHAEL BENNETT
 </option>
+<option value="REECE SHAW">
+REECE SHAW
+</option>
 <option value="RHIANNAN RUELCKE" >
 RHIANNAN RUELCKE
 </option>
@@ -105,6 +108,9 @@ TASHA PECK
 </option>
 <option value="TRENT BROOKES" >
 TRENT BROOKES
+</option>
+<option value="TUYET NGO" >
+TUYET NGO
 </option>
 <option value="PETA HILL-MILNES" >
 PETA HILL-MILNES
@@ -560,7 +566,7 @@ Date
 </li>
 </ul>
 </form>
- <div id="prWarning" class="info"><h2>It has passed the due date to submit this performance report. All reports must be submitted by COB Monday in order to be valid. Please speak directly to John regarding this report so it can be manually entered.</h>
+ <div id="prWarning" class="info"><h2>It has passed the due date to submit this performance report. All reports must be submitted by COB Sunday in order to be valid. Please speak directly to John regarding this report so it can be manually entered.</h>
  </div>
 
 </div><!--container-->
@@ -582,6 +588,7 @@ document.getElementById("Field55").readOnly = true;
 
 // check if today is tuesday, wednesday or thursday, store true or false in variable
 
+var d5 = Date.today().is().monday();
 var d2 = Date.today().is().wednesday();
 var d3 = Date.today().is().thursday();
 var d4 = Date.today().is().tuesday();
@@ -599,7 +606,7 @@ document.getElementById('Field55').value = d1;
 
 //if it is wednesday, hide the submit option and display overdue warning
 
-		if (d2 === true) {
+		if (d2 === true || d4 === true || d5 === true) {
 		      
 			  $("#saveForm").hide();
 			  $("#prWarning").show();

@@ -125,13 +125,13 @@ if (!$valid_session) {
 								</a> 
 							</li>
 							<li><a href="ajax/message.php" class="ajax-link"><i class="fa fa-envelope"></i><span>Send Message</span></a></li>
-									<!--<li>
-										<a href="ajax/vcardphp.php" class="ajax-link">
+								<!--	<li>
+										<a href="ajax/changepwd.php" class="ajax-link">
 											<i class="fa fa-user"></i>
-											<span>Send VCard</span>
+											<span>Change Password</span>
 										</a>
-									</li> 
-									<li>
+									</li> -->
+									<!-- <li>
 										<a href="ajax/page_messages.html" class="ajax-link">
 											<i class="fa fa-envelope"></i>
 											<span>Messages</span>
@@ -201,7 +201,7 @@ if (!$valid_session) {
 					</a>
 					<ul class="dropdown-menu">
 						<li><a class="ajax-link" href="ajax/trello.html"><i class="fa fa-bar-chart-o"></i><span >  Trello (WIP)</span></a></li>
-			
+						<li><a href="https://ollertapp.com" target="_blank"><i class="fa fa-area-chart"></i><span>Ollert (Burndown & CFD)</span></a></li>	
 					</ul>
 				</li>
 				<?php endif; ?>
