@@ -34,12 +34,12 @@ session_start();
 $connection = mysql_connect("labeeto3.cloudapp.net", "artslet", "dale4152");
 $db = mysql_select_db("artslet", $connection);
 // SQL query to fetch information of registered users and finds user match.
-$query = mysql_query("select fname,lname,contact from login", $connection);
+$query = mysql_query("select name,contact from login", $connection);
 $rows = mysql_num_rows($query);
 //$staff = mysql_fetch_array($query);
 
 while($staff = mysql_fetch_array($query)){
-	echo '<option value="' . $staff['contact']. '">' . $staff['fname']. ' ' . $staff['lname'];
+	echo '<option value="' . $staff['contact']. '">' . $staff['name'];
 	
 }
 mysql_close($connection);

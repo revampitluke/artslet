@@ -14,6 +14,7 @@ $c1 =$pieces[3];
 $consultant = substr($c1, 1);
 
 
+
 //$staff='54c72e52768cc3eeed788698';
 //https://api.trello.com/1/cards/5550024ddfd4360c59e0819c/idMembers?key=2b9e7d968e4d873a91fa5b00e879f98f&token=75e22aeb246e463aa3939c1edf7de73093ab1d970671136d15bdf9e8d61ddf81&$
 
@@ -53,11 +54,19 @@ $request =  curl_getinfo($ch, CURLINFO_HEADER_OUT);
 $error = curl_error($ch);
 curl_close($ch);
 
-echo 'This is output = '.$output .'<br />';
-echo 'This is request = '.$request .'<br />';
-echo 'This is error = '.$error .'<br />';
+//echo 'This is output = '.$output .'<br />';
+//echo 'This is request = '.$request .'<br />';
+//echo 'This is error = '.$error .'<br />';
+
+$parseerror = substr($output, 0, 12);
 
 
+$to = "trent@thetelstrastore.com.au";
+$subject = "Add Members Zap";
+$txt = $parseerror. "\n\n\n" . $output ."\n\n\n". $consultant. "\n". $staff . $request;
+$headers = "From: boh@thetelstrastore.com.au";
+
+mail($to,$subject,$txt,$headers);
 
 
  	
