@@ -1,6 +1,7 @@
 <?php
 $target_dir =  $_SERVER['DOCUMENT_ROOT']. "/img/";
-$target_file = $target_dir . time(). basename($_FILES["fileToUpload"]["name"]);
+$photo_name = time(). basename($_FILES["fileToUpload"]["name"]);
+$target_file = $target_dir . $photo_name;
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
@@ -44,9 +45,18 @@ echo '</script>';
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         
+session_start();
+$pname = $_SESSION["name"];
+$SESSION["avatar"] = $photo_name;
+$connection = mysql_connect("labeeto3.cloudapp.net", "artslet", "dale4152");
+// Selecting Database
+$db = mysql_select_db("artslet", $connection);
+$ses_sql = mysql_query("UPDATE login SET photo='$photo_name'" . " WHERE name='$pname'", $connection);
+//header("Location:../logout.php");
+mysql_close($connection);
 
 echo '<script type="text/javascript">';
-echo 'alert("the file has been uploaded.");';
+echo 'alert("Selfie changed successfully");';
 echo 'window.location="../profile.php";';
 echo '</script>';
 

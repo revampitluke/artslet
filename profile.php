@@ -151,13 +151,12 @@ if (!$valid_session) {
 											<span>Change Password</span>
 										</a>
 									</li> 
-								<?php if ($_SESSION["role"] == "admin") : ?>
 	<li>
-										<a href="ajax/upload.php" id="changepic" class="ajax-link">
+										<a href="ajax/upload.php" id="changepic" class="various fancybox fancybox.ajax">
 											<i class="fa fa-picture-o"></i>
 											<span>Change Selfie</span>
 										</a>
-									</li><?php endif; ?>
+									</li>
 								<!--	<li>
 										<a href="ajax/calendar.html" class="ajax-link">
 											<i class="fa fa-tasks"></i>
