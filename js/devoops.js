@@ -2294,6 +2294,19 @@ function DrawFullCalendar(){
 //////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
 $(document).ready(function () {
+              $(".various").fancybox({
+                maxWidth        : 800,
+                maxHeight       : 600,
+                fitToView       : false,
+                width           : '70%',
+                height          : '70%',
+                autoSize        : true,
+                closeClick      : false,
+                openEffect      : 'none',
+                closeEffect     : 'none'
+        });
+
+
 	$('.show-sidebar').on('click', function (e) {
 		e.preventDefault();
 		$('div#main').toggleClass('sidebar-show');

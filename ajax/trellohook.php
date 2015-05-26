@@ -58,15 +58,15 @@ curl_close($ch);
 //echo 'This is request = '.$request .'<br />';
 //echo 'This is error = '.$error .'<br />';
 
-$parseerror = substr($output, 0, 12);
+//$parseerror = substr($output, 0, 12);
 
 
-$to = "trent@thetelstrastore.com.au";
-$subject = "Add Members Zap";
-$txt = $parseerror. "\n\n\n" . $output ."\n\n\n". $consultant. "\n". $staff . $request;
-$headers = "From: boh@thetelstrastore.com.au";
+//$to = "trent@thetelstrastore.com.au";
+//$subject = "Add Members Zap";
+//$txt = $parseerror. "\n\n\n" . $output ."\n\n\n". $consultant. "\n". $staff . $request;
+//$headers = "From: boh@thetelstrastore.com.au";
 
-mail($to,$subject,$txt,$headers);
+//mail($to,$subject,$txt,$headers);
 
 
  	

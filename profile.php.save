@@ -38,23 +38,6 @@ if (!$valid_session) {
 		<link href="css/form.css" rel="stylesheet"> 
 		<link href="css/pace.css" rel="stylesheet">
 		<script src="js/pace.js"></script>
-<!--End Container-->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<!--<script src="http://code.jquery.com/jquery-latest.min.js"></script>-->
-<script src="plugins/jquery/jquery-2.1.0.min.js"></script>
-<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="plugins/bootstrap/bootstrap.min.js"></script>
-<script src="plugins/justified-gallery/jquery.justifiedgallery.min.js"></script>
-<script src="plugins/tinymce/tinymce.min.js"></script>
-<script src="plugins/tinymce/jquery.tinymce.min.js"></script>
-<!-- All functions for this theme + document.ready processing -->
-<script src="js/devoops.js"></script>
-<script src="js/wufoo.js"></script>
-<script src="js/date-en-AU.js"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script src="plugins/jQuery-Knob/jquery.knob.js"></script>
-<script src="plugins/fancybox/jquery.fancybox.pack.js"></script>
 		
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -144,20 +127,18 @@ if (!$valid_session) {
 								</a> 
 							</li>
 							<li><a href="ajax/message.php" class="ajax-link"><i class="fa fa-envelope"></i><span>Send Message</span></a></li>
-								
-<li>
+								<li>
 										<a href="ajax/changepwd.php" class="ajax-link">
 											<i class="fa fa-user"></i>
 											<span>Change Password</span>
 										</a>
 									</li> 
-								<?php if ($_SESSION["role"] == "admin") : ?>
-	<li>
-										<a href="ajax/upload.php" id="changepic" class="ajax-link">
+									<li>
+										<a href="ajax/upload.php" id="changeprofile" class="fancybox fancybox.ajax">
 											<i class="fa fa-picture-o"></i>
 											<span>Change Selfie</span>
 										</a>
-									</li><?php endif; ?>
+									</li>
 								<!--	<li>
 										<a href="ajax/calendar.html" class="ajax-link">
 											<i class="fa fa-tasks"></i>
@@ -302,9 +283,30 @@ if (!$valid_session) {
 		<!--End Content-->
 	</div>
 </div>
+<!--End Container-->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="http://code.jquery.com/jquery.js"></script>-->
+<script src="plugins/jquery/jquery-2.1.0.min.js"></script>
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/justified-gallery/jquery.justifiedgallery.min.js"></script>
+<script src="plugins/tinymce/tinymce.min.js"></script>
+<script src="plugins/tinymce/jquery.tinymce.min.js"></script>
+<script src="plugins/fancybox/source/
+<!-- All functions for this theme + document.ready processing -->
+<script src="js/devoops.js"></script>
+<script src="js/wufoo.js"></script>
+<script src="js/date-en-AU.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="plugins/jQuery-Knob/jquery.knob.js"></script>
 </body>
 
 
 
-
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
 </html>

@@ -1,34 +1,6 @@
-<?php
-session_start();
-
-$connection = mysql_connect("labeeto3.cloudapp.net", "artslet", "dale4152");
-// Selecting Database
-$db = mysql_select_db("artslet", $connection);
 
 
 
-$username = $_SESSION['login_user'];
-
-echo $username;
-
-//if(count($_POST)>0) {
-$ses_sql=mysql_query("select * from login where username='$username'", $connection);
-$row = mysql_fetch_assoc($ses_sql);
-$hash  = $row["password"];
-$currentPass = $_POST["currentPassword"];
-echo $hash;
-echo $currentPass;
-echo $username;
-//}
-//if (password_verify($currentPass, $hash)) {
-//newPassword2 = password_hash($currentPass, PASSWORD_DEFAULT);
-//mysql_query("UPDATE login set password='$newPassword2'" . "' WHERE username='$username'");
-//$message = "Password Changed";
-//} else $message = "Current Password is not correct";
-//}
-
-
-?>
 <html>
 <head>
 <title>Change Password</title>
@@ -63,6 +35,8 @@ if(newPassword.value != confirmPassword.value) {
 	document.getElementById("confirmPassword").innerHTML = "not same";
 	output = false;
 } 	
+
+
 return output;
 }
 </script>
@@ -81,9 +55,9 @@ return output;
 <div id="dashboard-header" class="row">
 	<div class="col-xs-10">
 		<h3>Change Password</h3><br>
-<form name="frmChange" method="post" action="" onSubmit="return validatePassword()">
+<form name="frmChange" method="post" action="ajax/changepass.php" onSubmit="return validatePassword()">
 <div style="width:500px;">
-<div class="message"><?php if(isset($message)) { echo $message; } ?></div>
+<div class="message" id="message" name="message"><?php if(isset($message)) { echo $message; } ?></div>
 <table border="0" cellpadding="10" cellspacing="0" width="500" align="center" class="tblSaveForm">
 
 <tr>

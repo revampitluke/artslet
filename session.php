@@ -12,9 +12,10 @@ $row = mysql_fetch_assoc($ses_sql);
 
 $role = $row['role'];
 $login_session =$row['name'];
+$avatar = $row['photo'];
 $_SESSION["name"] = $login_session;
 $_SESSION["role"] = $role;
-
+$_SESSION["avatar"] = $avatar;
 
 if(!isset($login_session)){
 mysql_close($connection); // Closing Connection

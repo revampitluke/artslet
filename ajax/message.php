@@ -30,22 +30,29 @@ session_start();
 <option value="61435371887-1416960819">Level 1 (Group)</option>
 <option value="all">Both Stores (Groups)</option>
 <?php endif; ?>
+
 <?php
+
+if ($_SESSION["role"] == "admin") {
 $connection = mysql_connect("labeeto3.cloudapp.net", "artslet", "dale4152");
 $db = mysql_select_db("artslet", $connection);
-// SQL query to fetch information of registered users and finds user match.
+//SQL query to fetch information of registered users and finds user match.
 $query = mysql_query("select name,contact from login", $connection);
 $rows = mysql_num_rows($query);
-//$staff = mysql_fetch_array($query);
+$staff = mysql_fetch_array($query);
 
 while($staff = mysql_fetch_array($query)){
-	echo '<option value="' . $staff['contact']. '">' . $staff['name'];
-	
+	if (!empty($staff['contact'])) {
+echo '<option value="' . $staff['contact']. '">' . $staff['name'];
+}
 }
 mysql_close($connection);
-
+}
 ?>
 
+
+
+<option value="">None</option>
 </select><br>
 
 
