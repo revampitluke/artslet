@@ -196,6 +196,19 @@ if (!$valid_session) {
 						<span class="hidden-xs">Dashboard</span>
 					</a>
 				</li>
+  <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle">
+                                                <i class="fa fa-link"></i>
+                                                 <span class="hidden-xs">My Performance</span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                                <li><a class="ajax-link" href="#"><i class="fa fa-apple"></i><span>Summary</span></a></li>
+                                                <li><a class="ajax-link" href="ajax/pr.php"><i class="fa fa-paw"></i><span>Performance Reports</span></a></li>
+
+
+                                        </ul>
+                                </li>
+
 					<li class="dropdown">
 					<a href="#" class="dropdown-toggle">
 							<i class="fa fa-newspaper-o"></i>
@@ -207,6 +220,8 @@ if (!$valid_session) {
 					<li><a class="ajax-link" href="ajax/gizmodo.php"><i class="fa fa-rss"></i><span>  Gizmodo</span></a></li>
 					</ul>
 					</li>
+                     
+
 				  <?php if ($_SESSION["role"] == "admin") : ?>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle">
@@ -267,11 +282,13 @@ if (!$valid_session) {
 					</ul>
 				</li>
 				<li class="dropdown">
-					<a href="ajax/paperwork.html" class="ajax-link">
+					<a href="#" class="dropdown-toggle">
 						<i class="fa fa-file-text-o"></i>
-						 <span class="hidden-xs">Paperwork</span>
+						 <span class="hidden-xs">Admin</span>
 					</a>
-			
+					<ul class="dropdown-menu">
+						<li><a class="ajax-link" href="ajax/demo.php"><span>DemoSIM Audit</span></a></li>
+					</ul>
 			</li>
 			<li class="dropdown">
 					<a href="#" class="dropdown-toggle">
