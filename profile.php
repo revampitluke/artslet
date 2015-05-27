@@ -202,8 +202,7 @@ if (!$valid_session) {
                                                  <span class="hidden-xs">My Performance</span>
                                         </a>
                                         <ul class="dropdown-menu">
-                                                <li><a class="ajax-link" href="#"><i class="fa fa-apple"></i><span>Summary</span></a></li>
-                                                <li><a class="ajax-link" href="ajax/pr.php"><i class="fa fa-paw"></i><span>Performance Reports</span></a></li>
+                                                <li><a class="ajax-link" href="ajax/pr.php"><i class="fa fa-user-plus"></i><span>Performance Reports</span></a></li>
 
 
                                         </ul>
@@ -281,15 +280,18 @@ if (!$valid_session) {
 			
 					</ul>
 				</li>
+				  <?php if ($_SESSION["role"] == "admin") : ?>
+
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle">
 						<i class="fa fa-file-text-o"></i>
 						 <span class="hidden-xs">Admin</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/demo.php"><span>DemoSIM Audit</span></a></li>
+						<li><a class="ajax-link" href="ajax/demo.php"><i class="fa fa-shield"></i><span>DemoSIM Audit</span></a></li>
 					</ul>
 			</li>
+		<?php endif; ?>
 			<li class="dropdown">
 					<a href="#" class="dropdown-toggle">
 						<i class="fa fa-link"></i>

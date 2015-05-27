@@ -26,6 +26,12 @@ $ses_sql = mysql_query("UPDATE demosims SET handset='$handset'" . " WHERE id='$i
 
 	$i = $i + 1;    
 
+$imei = $_POST[$keys[$i]];
+
+$ses_sql = mysql_query("UPDATE demosims SET imei='$imei'" . " WHERE id='$id'", $connection);
+
+	$i = $i + 1;    
+
 $sim = $_POST[$keys[$i]];
 
 $ses_sql = mysql_query("UPDATE demosims SET sim_number='$sim'" . " WHERE id='$id'", $connection);

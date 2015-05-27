@@ -46,7 +46,8 @@
 							<th>ID</th>
 							<th>Mobile</th>
 							<th>Handset</th>
-							<th>SIM</th>
+							<th>IMEI</th>	
+<th>SIM</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -69,6 +70,8 @@ while($data = mysql_fetch_array($query)){
 echo '<tr><td><input type="hidden" name = "'. $data['id']. '" value="'. $data['id']. '">'.$data['id']. '</td>' ;
 echo '<td>0'. $data['mobile_number'] . '</td>' ;
 echo '<td><input type="text" name = "'. $data['id']. '_handset" value ="'.$data['handset']. '"></td>' ;
+
+echo '<td><input type="number" name = "'. $data['id']. '_imei" value ="'.$data['imei']. '"></td>' ;
 echo '<td><input type="number" name = "'. $data['id']. '_number" value ="'.$data['sim_number']. '"></td>' ;
 
 
