@@ -1,20 +1,6 @@
 <?php
 include('session.php');
-session_start();
-
-$valid_session = isset($_SESSION['id']) ? $_SESSION['id'] === session_id() : FALSE;
-$avatar = $_SESSION['avatar'];
-
-if (!$valid_session) {
-   header('Location: index.php');
-   exit();
-}
-//if (isset($_SESSION["name"])) {
-//header('Location: index.php'); // Redirecting To Home Page
-//}
-
 ?>
-
 
 
 

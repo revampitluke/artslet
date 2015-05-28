@@ -1,8 +1,12 @@
+
 <?php
 
 session_start();
-?>
+//include ('session.php');
 
+
+
+?>
 
 <div class="row">
 	<div id="breadcrumb" class="col-xs-12">
@@ -17,8 +21,8 @@ session_start();
 <form id="myForm">
 <input id="staff_name" name="staff_name" type="text" size="50" placeholder="Staff Member" /><input type="submit" value="Search"></form>
 <p>
-<?php endif; ?>
 
+<?php endif; ?>
 
 
 
