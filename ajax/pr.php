@@ -13,10 +13,9 @@ session_start();
 	</div>
 </div>
 <?php if ($_SESSION["role"] == "admin") : ?>
-<label>Staff Name</label></br>
 
 <form id="myForm">
-<input id="staff_name" name="staff_name" type="text" size="50" /><input type="submit" value="Go"></form>
+<input id="staff_name" name="staff_name" type="text" size="50" placeholder="Staff Member" /><input type="submit" value="Search"></form>
 <p>
 <?php endif; ?>
 
