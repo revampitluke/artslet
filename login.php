@@ -24,7 +24,7 @@ $password = mysql_real_escape_string($password);
 // Selecting Database
 $db = mysql_select_db("artslet", $connection);
 // SQL query to fetch information of registered users and finds user match.
-$query = mysql_query("select password from login where username='$username'", $connection);
+$query = mysql_query("select password from login where username='$username' and active=1", $connection);
 $rows = mysql_num_rows($query);
 $logindata = mysql_fetch_array($query);
 mysql_close($connection);
