@@ -16,6 +16,8 @@ $avatar = $row['photo'];
 $_SESSION["name"] = $login_session;
 $_SESSION["role"] = $role;
 $_SESSION["avatar"] = $avatar;
+$_SESSION["pr_name"] = $login_session;
+
 
 if(!isset($login_session)){
 mysql_close($connection); // Closing Connection

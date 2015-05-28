@@ -1,17 +1,24 @@
+<?php
 
+session_start();
+?>
 
 
 <div class="row">
 	<div id="breadcrumb" class="col-xs-12">
 		<ol class="breadcrumb">
 			<li><a href="profile.php">Home</a></li>
-			<li><a href="#">Dashboard</a></li>
+			<li><a href="#">Performance Reports</a></li>
 		</ol>
 	</div>
 </div>
+<?php if ($_SESSION["role"] == "admin") : ?>
+<label>Staff Name</label></br>
 
-
-
+<form id="myForm">
+<input id="staff_name" name="staff_name" type="text" size="50" /><input type="submit" value="Go"></form>
+<p>
+<?php endif; ?>
 
 
 
@@ -31,7 +38,7 @@
 			<div class="box-header">
 				<div class="box-name">
 					<i class="fa fa-search"></i>
-					<span>Reports</span>
+					<span>Reports: <?= $_SESSION['pr_name']?></span>
 				</div>
 				<div class="no-move"></div>
 			</div>
@@ -42,7 +49,8 @@
 <?php
 
 session_start();
-$username = $_SESSION['name'];
+	$username= $_SESSION['pr_name'];
+	//$username = $_SESSION['name'];
 
 $connection = mysql_connect("labeeto3.cloudapp.net", "artslet", "dale4152");
 $db = mysql_select_db("artslet", $connection);
@@ -122,6 +130,37 @@ mysql_close($connection);
 	// Create UI spinner
 	$("#ui-spinner").spinner();
 	// Add Drag-n-Drop to boxes
-	WinMove();
+	//WinMove();
+ var availableTags = <?php include('staffautocomplete.php'); ?>;
+ $("#staff_name").autocomplete({
+        source: availableTags,
+        autoFocus:true
+    });
+
+$('#myForm').submit(function(evt){
+    var $form = $(this);
+    // Let's select and cache all the fields
+    // Serialize the data in the form
+    var serializedData = $form.serialize();
+
+
+    evt.preventDefault(); // Prevents default submission
+  request = $.ajax({
+        url: "ajax/pr_session.php",
+        type: "post",
+        data: serializedData
+    });
+    // Callback handler that will be called on success
+    request.done(function (response, textStatus, jqXHR){
+        // Log a message to the console
+	LoadAjaxContent('ajax/pr.php');
+
+    });
+
+
+});
+
+
+
 });
 </script>
