@@ -23,14 +23,21 @@ include('session.php');
 		<link href="css/style.css" rel="stylesheet">
 		<link href="css/form.css" rel="stylesheet"> 
 		<link href="css/pace.css" rel="stylesheet">
-		<script src="js/pace.js"></script>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">	
+
+	<script src="js/pace.js"></script>
 <!--End Container-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+
 <!--<script src="http://code.jquery.com/jquery-latest.min.js"></script>-->
 <script src="plugins/jquery/jquery-2.1.0.min.js"></script>
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="plugins/bootstrap/bootstrap.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="plugins/justified-gallery/jquery.justifiedgallery.min.js"></script>
 <script src="plugins/tinymce/tinymce.min.js"></script>
 <script src="plugins/tinymce/jquery.tinymce.min.js"></script>
@@ -41,6 +48,7 @@ include('session.php');
 <script src="js/bootstrap-datepicker.js"></script>
 <script src="plugins/jQuery-Knob/jquery.knob.js"></script>
 <script src="plugins/fancybox/jquery.fancybox.pack.js"></script>
+
 		
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -187,11 +195,21 @@ include('session.php');
                                                 <i class="fa fa-link"></i>
                                                  <span class="hidden-xs">My Performance</span>
                                         </a>
+
+
+
+
+
+
+
                                         <ul class="dropdown-menu">
-                                                <li><a class="ajax-link" href="ajax/pr.php"><i class="fa fa-user-plus"></i><span>Performance Reports</span></a></li>
+                                                <li><a class="ajax-link" href="ajax/mytrello.php"><i class="fa fa-trello"></i><span>Trello</span></a></li>
+                  
+                              <li><a class="ajax-link" href="ajax/pr.php"><i class="fa fa-user-plus"></i><span>Performance Reports</span></a></li>
 
 
                                         </ul>
+
                                 </li>
 
 					<li class="dropdown">
@@ -306,6 +324,8 @@ include('session.php');
 		<!--End Content-->
 	</div>
 </div>
+
+
 </body>
 
 

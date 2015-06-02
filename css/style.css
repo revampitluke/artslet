@@ -1,3 +1,7 @@
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
+
 body {
   color: #525252;
   background: #6AA662 url(../img/devoops_pattern_b10.png) 0 0 repeat;
