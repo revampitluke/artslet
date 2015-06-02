@@ -6,6 +6,7 @@ $data = $_POST['data'];
 $comment = $_POST['comment'];
 $pieces = explode("-", $data);
 
+$new = htmlspecialchars($comment, ENT_QUOTES);
 //name of consultant
 $c1 =$pieces[0];
 //sales week
@@ -25,7 +26,7 @@ $connection = mysql_connect("labeeto3.cloudapp.net", "artslet", "dale4152");
 // Selecting Database
 $db = mysql_select_db("artslet", $connection);
 
-$ses_sql = mysql_query("UPDATE performance SET comment='$comment'" . " WHERE name='$c1'". " AND date='$date'" , $connection);
+$ses_sql = mysql_query("UPDATE performance SET comment='$new'" . " WHERE name='$c1'". " AND date='$date'" , $connection);
 
 
 mysql_close($connection); // Closing Connection
@@ -38,7 +39,7 @@ if (!$ses_sql) {
 
 $to = "trent@thetelstrastore.com.au";
 $subject = "Add Comment Zap";
-$txt = $date. "\n\n\n" . $c1 ."\n\n\n" . $error . "\n\n\n";
+$txt = $date. "\n\n\n" . $c1 ."\n\n\n" . $error . "\n\n\n". $new. "\n\n\n". $comment;
 $headers = "From: boh@thetelstrastore.com.au";
 
 mail($to,$subject,$txt,$headers);
