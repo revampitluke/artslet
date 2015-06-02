@@ -80,7 +80,7 @@ z-index:10;
 						</div> -->
 					
 
- <div class="col-xs-12 ow-server" id="msgpending" style="border-style:outset;border-size:5px;">
+ <div class="col-xs-12 ow-server" id="msgpending" style="border-style:outset;border-size:5px;font-size:14px;">
 <h4 class="page-header">Pending</h4> 					
 					
 					
@@ -88,13 +88,13 @@ z-index:10;
 
 
 
- <div class="col-xs-12 ow-server" id="msgprov" style="border-style:outset;border-size:5px;">
+ <div class="col-xs-12 ow-server" id="msgprov" style="border-style:outset;border-size:5px;font-size:14px;">
 <h4 class="page-header">Provisioning</h4> 					
 					
 					
 </div>
 
- <div class="col-xs-12 ow-server" id="msgfollowup" style="border-style:outset;border-size:5px;">
+ <div class="col-xs-12 ow-server" id="msgfollowup" style="border-style:outset;border-size:5px;font-size:14px;">
 <h4 class="page-header">Followup</h4> 					
 					
 					
@@ -105,7 +105,7 @@ z-index:10;
 
 
 
- <div class="col-xs-12 ow-server" id="messages" style="border-style:outset;border-size:5px;">
+ <div class="col-xs-12 ow-server" id="messages" style="border-style:outset;border-size:5px;font-size:14px;">
 <h4 class="page-header">Overdue Cards</h4> 					
 					
 					
