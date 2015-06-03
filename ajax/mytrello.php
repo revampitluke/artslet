@@ -9,6 +9,9 @@ session_start();
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 -->
+
+
+
 <div class="row">
 	<div id="breadcrumb" class="col-xs-12">
 		<ol class="breadcrumb">
@@ -19,10 +22,7 @@ session_start();
 	</div>
 </div>
 <style>
-.ow-server {
-font-size:10px;
 
-}
 .knob {
 margin-top:45px !important;
 
@@ -63,6 +63,7 @@ z-index:10;
 						</div><p>
 													<div class="col-xs-12 ow-server" id="panel2" style="border-style:outset;border-size:5px;">
 								<h4 class="page-header">EFM Level 1</h4>
+	var txt = "<a  href=" + field.url + " target='_blank'>" + field.name + "</a><i> Due in " + days +" days<br>";
 						
 														<input id="bundles2" class="knob" data-width="100"  data-height="100" data-angleOffset="180" data-fgColor="#6AA662" data-bgColor="#525252" data-skin="tron" data-thickness=".2" data-readonly="true" data-max="30"><span class="vlabel"><i>Bundles</i></span>
 														<input id="credits2" class="knob" data-width="100"  data-height="100" data-angleOffset="180" data-fgColor="#6AA662" data-bgColor="#525252" data-skin="tron" data-thickness=".2" data-readonly="true" data-max="30"><span class="vlabel"><i>Credits</i></span>
@@ -112,6 +113,14 @@ z-index:10;
 </div>
 
 
+
+
+ <div class="col-xs-12 ow-server" id="efmmessages" style="border-style:outset;border-size:5px;font-size:14px;">
+<h4 class="page-header">EFM Cards to Fix</h4>
+
+
+</div>
+
 				
 
 <script src="../plugins/jQuery-Knob/jquery.knob.js"></script>
@@ -123,19 +132,43 @@ var counter = 0;
 var trelloID = "<?php echo $_SESSION['trello']; ?>";
 
 
-function dispTrelloCount(t, div, div2){
+function dispTrelloCount(t, div, div2, d){
 
 $.getJSON(trelloAPI + t + trelloKey, function(result){
         $.each(result, function(i, field){
        //   $("#panel").append(counter + field.name + "<p>");   code to display a list of the name property for each item
         if(jQuery.inArray(trelloID, field.idMembers) != -1) {
+
     console.log("is in array");
 	counter = counter + 1;
+	var dDue = new Date(field.due);
+	var d2 = new Date(d);
+	var d3 = dDue.getTime();
+	var d5 = d2.getTime();
+	var d4 = Math.abs(d5 - d3);
+	var days = Math.floor(d4 / 86400000);
 
-	var txt = "<a  href=" + field.url + " target='_blank'>" + field.name + "</a><br>";
+	if (d > field.due) {
+			var txt = "<a  style='color:red' href=" + field.url + " target='_blank'>" + field.name + "</a><i> Overdue by " + days + " days<br>";
+	$(div2).append(txt);	
+	}
+	else {
+	if (days == 0) {
+	var txt = "<a  href=" + field.url + " target='_blank'>" + field.name + "</a><i> Due today<br>";
+
+	} else if (days == 1) {
+	
+	var txt = "<a  href=" + field.url + " target='_blank'>" + field.name + "</a><i> Due tomorrow<br>";
+
+	} else {
+	var txt = "<a  href=" + field.url + " target='_blank'>" + field.name + "</a><i> Due in " + days +" days<br>";
+
+	}
+	
+
 	$(div2).append(txt);	 
-
-
+	}
+	
 } else {
     console.log("is NOT in array");
 }  
@@ -148,24 +181,140 @@ counter = 0;
 }
 
 
+
+function dispTrelloEFM(t, t2, div, d){
+
+$.getJSON(trelloAPI + t + trelloKey, function(result){
+        $.each(result, function(i, field){
+       //   $("#panel").append(counter + field.name + "<p>");   code to display a list of the name property for each item
+        if(jQuery.inArray(trelloID, field.idMembers) != -1) {
+
+    console.log("is in array");
+	counter = counter + 1;
+	var dDue = new Date(field.due);
+	var d2 = new Date(d);
+	var d3 = dDue.getTime();
+	var d5 = d2.getTime();
+	var d4 = Math.abs(d5 - d3);
+	var days = Math.floor(d4 / 86400000);
+
+	if (d > field.due) {
+			var txt = "<a  style='color:red' href=" + field.url + " target='_blank'>" + field.name + "</a><i> Overdue by " + days + " days<br>";
+	$(div).append(txt);	
+	}
+	else {
+	if (days == 0) {
+	var txt = "<a  href=" + field.url + " target='_blank'>" + field.name + "</a><i> Due today<br>";
+
+	} else if (days == 1) {
+	
+	var txt = "<a  href=" + field.url + " target='_blank'>" + field.name + "</a><i> Due tomorrow<br>";
+
+	} else {
+	var txt = "<a  href=" + field.url + " target='_blank'>" + field.name + "</a><i> Due in " + days +" days<br>";
+
+	}
+	
+
+	$(div).append(txt);	 
+	}
+	
+} else {
+    console.log("is NOT in array");
+}  
+        });
+
+});
+
+
+$.getJSON(trelloAPI + t2 + trelloKey, function(result){
+        $.each(result, function(i, field){
+       //   $("#panel").append(counter + field.name + "<p>");   code to display a list of the name property for each item
+        if(jQuery.inArray(trelloID, field.idMembers) != -1) {
+
+    console.log("is in array");
+	counter = counter + 1;
+	var dDue = new Date(field.due);
+	var d2 = new Date(d);
+	var d3 = dDue.getTime();
+	var d5 = d2.getTime();
+	var d4 = Math.abs(d5 - d3);
+	var days = Math.floor(d4 / 86400000);
+
+	if (d > field.due) {
+			var txt = "<a  style='color:red' href=" + field.url + " target='_blank'>" + field.name + "</a><i> Overdue by " + days + " days<br>";
+	$(div).append(txt);	
+	}
+	else {
+	if (days == 0) {
+	var txt = "<a  href=" + field.url + " target='_blank'>" + field.name + "</a><i> Due today<br>";
+
+	} else if (days == 1) {
+	
+	var txt = "<a  href=" + field.url + " target='_blank'>" + field.name + "</a><i> Due tomorrow<br>";
+
+	} else {
+	var txt = "<a  href=" + field.url + " target='_blank'>" + field.name + "</a><i> Due in " + days +" days<br>";
+
+	}
+	
+
+	$(div).append(txt);	 
+	}
+	
+} else {
+    console.log("is NOT in array");
+}  
+        });
+
+});
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
 function dispTrelloOverdue(t, div, d){
 $.getJSON(trelloAPI + t + trelloKey, function(result){
         $.each(result, function(i, field){
        //   $("#panel").append(counter + field.name + "<p>");   code to display a list of the name property for each item
 
-        if(jQuery.inArray(trelloID, field.idMembers) != -1) {
-    
-				 if (field.due < d) {
-		 
-		 counter = counter + 1;
-	var txt = "<a  href=" + field.url + " target='_blank'>" + field.name + "</a><br>";
-	$("#messages").append(txt);	 
+               if(jQuery.inArray(trelloID, field.idMembers) != -1) {
+    	if (field.due < d) {
+	counter = counter + 1;
+	var dDue = new Date(field.due);
+	var d2 = new Date(d);
+	var d3 = dDue.getTime();
+	var d5 = d2.getTime();
+	var d4 = d5 - d3;
+	var days = Math.floor(d4 / 86400000);
+	if (days == 0) {
+			var txt = "<a  style='color:red' href=" + field.url + " target='_blank'>" + field.name + "</a><i> Due today<br>";
+	} else if (days == 1) {
+	
+	var txt = "<a  style='color:red' href=" + field.url + " target='_blank'>" + field.name + "</a><i> Overdue by 1 day<br>";
+
+	} else {
+	var txt = "<a  style='color:red' href=" + field.url + " target='_blank'>" + field.name + "</a><i> Overdue by  " + days +" days<br>";
+
 	}
-		 else {
-		 
-		 }
 
-
+	$(messages).append(txt);	 
+	}
+else {
+}
 
 
 
@@ -173,6 +322,12 @@ $.getJSON(trelloAPI + t + trelloKey, function(result){
     console.log("is NOT in array");
 }
         });
+
+
+
+
+
+       
 
 
 
@@ -190,13 +345,12 @@ counter = 0;
 $(function() {
  var d1 = new Date();
  var d2 = d1.toISOString(); 
-
   // https://api.trello.com/1/boards/8qrZcjWO/lists?fields=name&key=2b9e7d968e4d873a91fa5b00e879f98f&token=75e22aeb246e463aa3939c1edf7de73093ab1d970671136d15bdf9e8d61ddf81
 // api call to find list id. change boards url
- dispTrelloCount("/1/lists/54b6f314fccc6a04964a722c/cards?lists=open", "#vKnob", "#msgpending");
-dispTrelloCount("/1/lists/54b6f31c8465c0b6d6c4971f/cards?lists=open", "#pKnob", "#msgprov");
+ dispTrelloCount("/1/lists/54b6f314fccc6a04964a722c/cards?lists=open", "#vKnob", "#msgpending", d2);
+dispTrelloCount("/1/lists/54b6f31c8465c0b6d6c4971f/cards?lists=open", "#pKnob", "#msgprov", d2);
 //dispTrelloCount("/1/lists/54e59f47d51ec973a73cab52/cards?lists=open", "#pickup", "#msgpickup");
-dispTrelloCount("/1/lists/54b706594ac01dba83dcd0a6/cards?lists=open", "#followup", "#msgfollowup");
+dispTrelloCount("/1/lists/54b706594ac01dba83dcd0a6/cards?lists=open", "#followup", "#msgfollowup", d2);
 //dispTrelloCount("/1/lists/54ed4a8152f71d6cf5e5fff0/cards?lists=open&fields=name&card_fields=name", "#priority");
 //dispTrelloCount("/1/lists/54b6f31fa3e0cbd174387286/cards?lists=open&fields=name&card_fields=name", "#cfollowup");
 //dispTrelloCount("/1/lists/54c6e05e4e230c602fdc92ad/cards?lists=open&fields=name&card_fields=name", "#cancelled");
@@ -205,6 +359,9 @@ dispTrelloCount("/1/lists/54b706594ac01dba83dcd0a6/cards?lists=open", "#followup
 //dispTrelloCount("/1/lists/54d1a2e407d91a62dadb6550/cards?lists=open&fields=name&card_fields=name", "#orders");
 //dispTrelloCount("/1/lists/54d19a1edeb8339514a938a5/cards?lists=open&fields=name&card_fields=name", "#messages");
 dispTrelloOverdue("/1/boards/UpR18qm7/cards?lists=open&fields=due,name,url,idMembers", "#bKnob", d2);
+dispTrelloEFM("/1/boards/yu4Tmlx7/cards?lists=open&fields=due,name,url,idMembers","/1/boards/8qrZcjWO/cards?lists=open&fields=due,name,url,idMembers", "#efmmessages", d2);
+
+
 //dispTrelloOverdue("/1/boards/8qrZcjWO/cards?lists=open&fields=due,name", "#eKnob", d2);
 //dispTrelloCount("/1/lists/54d17e4e930f1eee7139160a/cards?lists=open&fields=name&card_fields=name", "#bundles2");
 //dispTrelloCount("/1/lists/5535e127200952ab86f8c9cb/cards?lists=open&fields=name&card_fields=name", "#credits2");
@@ -216,6 +373,7 @@ dispTrelloOverdue("/1/boards/UpR18qm7/cards?lists=open&fields=due,name,url,idMem
 //dispTrelloCount("/1/lists/54d2ef60b5a1a436537e39f1/cards?lists=open&fields=name&card_fields=name", "#cfollowup");
 //dispTrelloOverdue("/1/boards/M1FQ96TL/cards?lists=open&fields=due,name", "#eKnob3", d2);
 //  $
+
 });
 </script>
  
