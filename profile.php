@@ -302,6 +302,9 @@ include('session.php');
 						 <span class="hidden-xs">Links</span>
 					</a>
 					<ul class="dropdown-menu">
+
+						<li><a href="https://www.findmyshift.com" target="_blank"><i class="fa fa-cab"></i><span>FindMyShift</span></a></li>
+
 						<li><a href="https://selfsolve.apple.com/deregister-imessage" target="_blank"><i class="fa fa-apple"></i><span>Deregister iMessage</span></a></li>
 						<li><a href="http://netpro.ultimatefreehost.in" target="_blank"><i class="fa fa-thumbs-up"></i><span>NPS Tool</span></a></li>
 						<li><a href="http://retaillive.com.au" target="_blank"><i class="fa fa-question-circle"></i><span>RetailLive</span></a></li>
@@ -309,6 +312,8 @@ include('session.php');
 						<li><a href="https://retaillive.com.au/22552.aspx" target="_blank"><i class="fa fa-phone-square"></i><span>Interim Devices</span></a></li>
 						<li><a href="https://www.telstragotomarket.com.au/auth/login" target="_blank"><i class="fa fa-shopping-cart"></i><span>Go To Market</span></a></li>
 						<li><a href="https://unlock.telstra.com/iphoneunlock/main?execution=e1s1" target="_blank"><i class="fa fa-unlock"></i><span>iPhone Unlock</span></a></li>
+						<li><a href="http://www.adsl2exchanges.com.au/" target="_blank"><i class="fa fa-phone"></i><span>ADSL2 Exchanges</span></a></li>
+						<li><a href="http://www.nbnco.com.au/connect-home-or-business/check-your-address.html" target="_blank"><i class="fa fa-location-arrow"></i><span>NBN Address Check</span></a></li>
 
 			
 					</ul>
