@@ -258,7 +258,7 @@ include('session.php');
 						 <span class="hidden-xs">Forms</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="forms/pr2.html"><i class="fa fa-tasks"></i><span >Performance Report</span></a></li>
+						<li><a class="ajax-link" href="forms/pr.php"><i class="fa fa-tasks"></i><span >Performance Report</span></a></li>
 						
 						<?php if ($_SESSION["role"] == "admin") : ?>
 						<li><a class="ajax-link" href="forms/review.html"><i class="fa fa-graduation-cap"></i><span >Monthly Performance Review</span></a></li>

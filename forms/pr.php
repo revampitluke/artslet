@@ -1,4 +1,9 @@
+<?php
 
+
+
+
+?>
 
 <!--[if lt IE 10]>
 <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -573,50 +578,31 @@ Date
 
 <script type="text/javascript">
 //hide the warning at the bottom when page is initalised
-
 $("#prWarning").hide();
-
-
 </script>
 <script type="text/javascript">
-
 //fix the date field so it can not be modified
-
 document.getElementById("Field55").readOnly = true;
-
 // check if today is tuesday, wednesday or thursday, store true or false in variable
-
 var d5 = Date.today().is().monday();
 var d2 = Date.today().is().wednesday();
 var d3 = Date.today().is().thursday();
 var d4 = Date.today().is().tuesday();
-
 // if today is thursday, set sales week ending to today, else set it to last thursday
-
 if (d3 === true){
 var d1 = Date.today().toString("dd-MM-yyyy"); }
 else {
 var d1 = Date.today().moveToDayOfWeek(4, -1).toString("dd-MM-yyyy");
 };
-
-
 document.getElementById('Field55').value = d1;
-
 //if it is wednesday, hide the submit option and display overdue warning
-
 		if (d2 === true || d4 === true || d5 === true) {
 		      
 			  $("#saveForm").hide();
 			  $("#prWarning").show();
-
 		}
 		else {
-
 		};
 	
  
-
-
-
 </script>
-

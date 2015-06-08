@@ -1,7 +1,7 @@
 <?php
 class SystemConfiguration {
     // General Settings
-    public static $base_url    = 'http://url-to-easyappointments-folder/';
+    public static $base_url    = 'http://my.thetelstrastore.com.au/platinum/';
     
     // Database Settings
     public static $db_host     = 'localhost';
