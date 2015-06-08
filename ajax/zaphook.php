@@ -11,7 +11,7 @@ $new = htmlspecialchars($comment, ENT_QUOTES);
 $c1 =$pieces[0];
 //sales week
 $c3 = substr($pieces[1], 1);
-$date =$pieces[3]. "-". $pieces[2]. "-". $c3;
+$date =$pieces[3]. "-". $c3. "-". $pieces[2];
 
 //$date = substr($c2, 1);
 
