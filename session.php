@@ -14,14 +14,17 @@ $role = $row['role'];
 $login_session =$row['name'];
 $avatar = $row['photo'];
 $trello = $row['trello'];
+$email = $row['email'];
+
 
 $_SESSION["name"] = $login_session;
 $_SESSION["role"] = $role;
 $_SESSION["avatar"] = $avatar;
 $_SESSION["pr_name"] = $login_session;
 $_SESSION["trello"] = $trello;
+$_SESSION["email"] = $email;
 
-$ses_sql=mysql_query("select date from performance where name='LIAM HILL MILNES' order by date desc", $connection);
+$ses_sql=mysql_query("select date from performance where name='$login_session' order by date desc", $connection);
 $row = mysql_fetch_assoc($ses_sql);
 $pr_date= $row['date'];
 $_SESSION["pr_date"] = $pr_date;

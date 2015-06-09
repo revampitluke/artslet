@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 
 
@@ -38,89 +38,33 @@ Customer Advisor
 </label>
 <div>
 <select id="Field61" name="Field61" class="field select small"      tabindex="1" >
-<option value="NAME" selected="selected">
-NAME
-</option>
-<option value="ALEX TURLEY" >
-ALEX TURLEY
-</option>
-<option value="ALISHA VLUG" >
-ALISHA VLUG
-</option>
-<option value="ANDRE FISHER" >
-ANDRE FISHER
-</option>
-<option value="ANITA BAKER" >
-ANITA BAKER
-</option>
-<option value="ARASH KETABSHI" >
-ARASH KETABSHI
-</option>
-<option value="CAITLIN BURRILL" >
-CAITLIN BURRILL
-</option>
-<option value="CHRIS PERKINS" >
-CHRIS PERKINS
-</option>
-<option value="CHRIS THOMSON" >
-CHRIS THOMSON
-</option>
-<option value="CORNEELS DE WAARD" >
-CORNEELS DE WAARD
-</option>
-<option value="DAVE JACOBS" >
-DAVE JACOBS
-</option>
 
-<option value="ISA DALEY" >
-ISA DALEY
-</option>
 
-<option value="KRYSTAL FRANKS" >
-KRYSTAL FRANKS
-</option>
-<option value="KYLIE HOLLIDAY" >
-KYLIE HOLLIDAY
-</option>
-<option value="LIAM HILL MILNES" >
-LIAM HILL MILNES
-</option>
-<option value="MAHDIS DANIALI" >
-MAHDIS DANIALI
-</option>
-<option value="MELANIE TURNER" >
-MELANIE TURNER
-</option>
-<option value="RACHAEL BENNETT" >
-RACHAEL BENNETT
-</option>
-<option value="REECE SHAW">
-REECE SHAW
-</option>
-<option value="RHIANNAN RUELCKE" >
-RHIANNAN RUELCKE
-</option>
-<option value="ROMA DAYAL" >
-ROMA DAYAL
-</option>
-<option value="ROSS THURLOW" >
-ROSS THURLOW
-</option>
-<option value="TASHA PECK" >
-TASHA PECK
-</option>
-<option value="TRENT BROOKES" >
-TRENT BROOKES
-</option>
-<option value="TUYET NGO" >
-TUYET NGO
-</option>
-<option value="PETA HILL MILNES" >
-PETA HILL MILNES
-</option>
+<?php
+if ($_SESSION["role"] == "admin") {
+$connection = mysql_connect("labeeto3.cloudapp.net", "artslet", "dale4152");
+$db = mysql_select_db("artslet", $connection);
+//SQL query to fetch information of registered users and finds user match.
+$query = mysql_query("select name from login where active=1", $connection);
+$rows = mysql_num_rows($query);
+$staff = mysql_fetch_array($query);
+while($staff = mysql_fetch_array($query)){
+	if (!empty($staff['name'])) {
+echo '<option value="' . $staff['name']. '">' . $staff['name']. '</option>';
+}
+
+}
+mysql_close($connection);
+}
+else {
+echo '<option value="'. $_SESSION["name"]. '">' . $_SESSION["name"]. '</option>';
+
+}
+?>
+
+
 </select>
 </div>
-<p class="instruct" id="instruct3"><small>Choose your name from the drop down box</small></p>
 </li>
 <li id="foli53" class="notranslate rightHalf      ">
 <label class="desc" id="title53" for="Field53">
@@ -581,6 +525,11 @@ Date
 $("#prWarning").hide();
 </script>
 <script type="text/javascript">
+
+var role = "<?php echo $_SESSION['role']; ?>";
+
+
+
 //fix the date field so it can not be modified
 document.getElementById("Field55").readOnly = true;
 // check if today is tuesday, wednesday or thursday, store true or false in variable
@@ -596,13 +545,21 @@ var d1 = Date.today().moveToDayOfWeek(4, -1).toString("dd-MM-yyyy");
 };
 document.getElementById('Field55').value = d1;
 //if it is wednesday, hide the submit option and display overdue warning
-		if (d2 === true || d4 === true || d5 === true) {
+	
+	if (d2 === true || d4 === true || d5 === true) {
 		      
 			  $("#saveForm").hide();
 			  $("#prWarning").show();
 		}
-		else {
-		};
+		
+	else {	
+
+};
+
+if (role == "admin") {
+	$("#saveForm").show();
+	$("#prWarning").hide();
+	}
 	
  
 </script>
