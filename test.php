@@ -39,7 +39,7 @@ echo date('w');
 echo date('w', strtotime($olddate));
 $today2 = strtotime($today);
 $thursday = strtotime("last thursday", $today2);
-echo date ('Y-m-j', $today3);
+echo date ('Y-m-j', $thursday);
 //if(!isset($login_session)){
 mysql_close($connection); // Closing Connection
 //header('Location: ../index.php'); // Redirecting To Home Page

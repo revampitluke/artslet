@@ -72,7 +72,7 @@ echo '<td>0'. $data['mobile_number'] . '</td>' ;
 echo '<td><input type="text" name = "'. $data['id']. '_handset" value ="'.$data['handset']. '"></td>' ;
 
 echo '<td><input type="number" name = "'. $data['id']. '_imei" value ="'.$data['imei']. '"></td>' ;
-echo '<td><input type="number" name = "'. $data['id']. '_number" value ="'.$data['sim_number']. '"></td>' ;
+echo '<td><input type="number" name = "'. $data['id']. '_number" value ="'.$data['sim_number']. '"></td></tr>' ;
 
 
 

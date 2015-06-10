@@ -293,6 +293,8 @@ include('session.php');
 					</a>
 					<ul class="dropdown-menu">
 						<li><a class="ajax-link" href="ajax/demo.php"><i class="fa fa-shield"></i><span>DemoSIM Audit</span></a></li>
+						<li><a class="ajax-link" href="ajax/admin_pr.php"><i class="fa fa-building"></i><span>Performance Summary</span></a></li>
+
 					</ul>
 			</li>
 		<?php endif; ?>
