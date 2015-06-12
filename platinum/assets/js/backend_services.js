@@ -193,8 +193,9 @@ ServicesHelper.prototype.bindEventHandlers = function() {
         var service = {
             'name': $('#service-name').val(),
             'duration': $('#service-duration').val(),
-            'price': $('#service-price').val(),
             'currency': $('#service-currency').val(),
+
+            'price': $('#service-price').val(),
             'description': $('#service-description').val()
         };
 
@@ -354,8 +355,9 @@ ServicesHelper.prototype.display = function(service) {
     $('#service-id').val(service.id);
     $('#service-name').val(service.name);
     $('#service-duration').val(service.duration);
-    $('#service-price').val(service.price);
     $('#service-currency').val(service.currency);
+
+    $('#service-price').val(service.price);
     $('#service-description').val(service.description);
     
     var categoryId = (service.id_service_categories != null) ? service.id_service_categories : 'null';
