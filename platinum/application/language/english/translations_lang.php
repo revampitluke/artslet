@@ -1,15 +1,15 @@
 <?php
 // English
 $lang['page_title'] = 'Book Appointment With';
-$lang['step_one_title'] = 'Select Service & Provider';
+$lang['step_one_title'] = 'Select Service & Store';
 $lang['select_service'] = 'Select Service';
-$lang['select_provider'] = 'Select Provider';
+$lang['select_provider'] = 'Select Store';
 $lang['duration'] = 'Duration';
 $lang['minutes'] = 'Minutes';
 $lang['price'] = 'Price';
 $lang['next'] = 'Next';
 $lang['back'] = 'Back';
-$lang['step_two_title'] = 'Select Appointment Date And Time';
+$lang['step_two_title'] = 'Select Appointment';
 $lang['no_available_hours'] = 'There are no available appointment hours for the selected date. Please choose another date.';
 $lang['appointment_hour_missing'] = 'Please select an appointment hour before continuing!';
 $lang['step_three_title'] = 'Fill In Your Information';

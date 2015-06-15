@@ -302,14 +302,12 @@
                         </div>
 
                         <div class="span3">
-                            <label for="address"><?php echo $this->lang->line('address'); ?></label>
-                            <input type="text" id="address" maxlength="250" />
+                            <label for="billing-account">Billing Account</label>
+                            <input type="text" id="billing-account" maxlength="250" />
 
-                            <label for="city"><?php echo $this->lang->line('city'); ?></label>
-                            <input type="text" id="city" maxlength="120" />
-
-                            <label for="zip-code"><?php echo $this->lang->line('zip_code'); ?></label>
-                            <input type="text" id="zip-code" maxlength="120" />
+                            <label for="platinum">Platinum member?</label>
+                            <input type="radio" name="platinum" value="y" />Yes  
+				<input type="radio" name="platinum"  value="n" checked="checked"  />No <p><p><p>
 
                             <label for="notes"><?php echo $this->lang->line('notes'); ?></label>
                             <textarea id="notes" maxlength="500" rows="3"></textarea>
@@ -366,14 +364,14 @@
                 // FRAME FOOTER 
                 // ------------------------------------------------------ ?>
             <div id="frame-footer">
-                Powered By 
+               <!-- Powered By 
                 <a href="http://easyappointments.org" target="_blank">
                     Easy!Appointments
                 </a>
-                |
+               
                 <span id="select-language" class="badge badge-inverse">
 		        	<?php echo ucfirst($this->config->item('language')); ?>
-		        </span>
+		        </span> -->
             </div>
         </div>
     </div>

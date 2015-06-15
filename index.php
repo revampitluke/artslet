@@ -57,12 +57,13 @@ header("location: profile.php");
 			</div>
 		</div>
 	</div>
+
 </div>
 </body>
 
 <footer class ="footer" style="position:absolute;bottom:0;width:100%;height:50px;text-align:center;color:white;background: #525252 url(../img/devoops_pattern_b10.png) 0 0 repeat;">
   <p style="font-size:12px">Artslet Comm Pty Ltd &copy;2015 <br>
-  Website developed and maintained by <a href="http://www.trentit.com.au">TrentIT</a>.</p>
+  Website developed and maintained by <a href="http://www.trentit.com.au">TrentIT</a><br>
 </footer>
 
 </html>
