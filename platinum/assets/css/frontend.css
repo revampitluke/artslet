@@ -22,7 +22,11 @@ body {
 #book-appointment-wizard #header {
     padding: 5px;
     height: 70px;
-    background: linear-gradient(to left, rgb(0, 180, 255), rgb(101, 45, 184);
+    background: -webkit-linear-gradient(to left, rgb(0, 180, 255), rgb(101, 45, 184));
+    background: -o-linear-gradient(to left, rgb(0, 180, 255), rgb(101, 45, 184));
+    background: -moz-linear-gradient(to left, rgb(0, 180, 255), rgb(101, 45, 184));
+    background: linear-gradient(to left, rgb(0, 180, 255), rgb(101, 45, 184));
+
     border-bottom: 4px solid #1A865F;
 }
 
