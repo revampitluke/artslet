@@ -69,6 +69,20 @@ html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
+        height: 100%;      
+        -webkit-background-size: cover;      
+        -moz-background-size: cover;      
+        -o-background-size: cover;      
+        background-size: cover;      
+        background-repeat:no-repeat;      
+        background: -webkit-linear-gradient( to left top, blue, red);      
+        background: -moz-linear-gradient(to top left, rgb(0, 180, 255), rgb(101, 45, 184));      
+        background: -ms-linear-gradient(to top left, rgb(0, 180, 255), rgb(101, 45, 184));    
+        background: -o-linear-gradient(to top left, rgb(0, 180, 255), rgb(101, 45, 184));     
+  background: linear-gradient(to top left, rgb(0, 180, 255), rgb(101, 45, 184));
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
 }
 
 a:focus {
@@ -227,7 +241,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  background-color: #ffffff;
+  
 }
 
 a {
