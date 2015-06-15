@@ -174,10 +174,9 @@ CustomersHelper.prototype.bindEventHandlers = function() {
             'last_name': $('#last-name').val(),
             'email': $('#email').val(),
             'phone_number': $('#phone-number').val(),
-            'address': $('#address').val(),
-            'city': $('#city').val(),
-            'zip_code': $('#zip-code').val(),
-            'notes': $('#notes').val()
+            'notes': $('#notes').val(),
+	    'billing_account' : $('#billing-account').val(),
+	    'platinum' : $('#platinum').val()
         };
 
         if ($('#customer-id').val() != '') {
@@ -322,11 +321,9 @@ CustomersHelper.prototype.display = function(customer) {
     $('#last-name').val(customer.last_name);
     $('#email').val(customer.email);
     $('#phone-number').val(customer.phone_number);
-    $('#address').val(customer.address);
-    $('#city').val(customer.city);
-    $('#zip-code').val(customer.zip_code);
     $('#notes').val(customer.notes);
-
+   $('#billing-account').val(customer.billing_account);
+    $('#platinum').val(customer.platinum);	
     $('#customer-appointments').data('jsp').destroy();
     $('#customer-appointments').empty();
     $.each(customer.appointments, function(index, appointment) {

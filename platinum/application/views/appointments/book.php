@@ -303,11 +303,13 @@
 
                         <div class="span3">
                             <label for="billing-account">Billing Account</label>
-                            <input type="text" id="billing-account" maxlength="250" />
+                            <input type="text" id="billing-account" maxlength="13" />
 
-                            <label for="platinum">Platinum member?</label>
-                            <input type="radio" name="platinum" value="y" />Yes  
-				<input type="radio" name="platinum"  value="n" checked="checked"  />No <p><p><p>
+                            <label for="platinum">Platinum customer?</label>
+                            <select name="platinum" id="platinum">  
+			<option value ="No">Select</option>
+			<option value ="No">No</option>
+			<option value ="Yes">Yes</option></select> <p><p><p>
 
                             <label for="notes"><?php echo $this->lang->line('notes'); ?></label>
                             <textarea id="notes" maxlength="500" rows="3"></textarea>

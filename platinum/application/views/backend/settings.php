@@ -255,17 +255,6 @@
                 <label for="phone-number"><?php echo $this->lang->line('phone_number'); ?> *</label>
                 <input type="text" id="phone-number" class="span9 required" />
                 
-                <label for="address"><?php echo $this->lang->line('address'); ?></label>
-                <input type="text" id="address" class="span9" />
-                
-                <label for="city"><?php echo $this->lang->line('city'); ?></label>
-                <input type="text" id="city" class="span9" />
-                
-                <label for="state"><?php echo $this->lang->line('state'); ?></label>
-                <input type="text" id="state" class="span9" />
-                
-                <label for="zip-code"><?php echo $this->lang->line('zip_code'); ?></label>
-                <input type="text" id="zip-code" class="span9" />
                 
                 <label for="notes"><?php echo $this->lang->line('notes'); ?></label>
                 <textarea id="notes" class="span9" rows="3"></textarea>

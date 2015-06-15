@@ -30,8 +30,8 @@ var BackendCalendar = {
             'firstDay': 1, // Monday
             'slotMinutes': 30,
             'snapMinutes': 15,
-            'axisFormat': 'HH:mm',
-            'timeFormat': 'HH:mm{ - HH:mm}',
+            'axisFormat': 'hh:mm t',
+            'timeFormat': 'hh:mm t{ - hh:mm t}',
             'allDayText': EALang['all_day'], 
             'columnFormat': {
                 'month': 'ddd',

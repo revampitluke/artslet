@@ -130,14 +130,8 @@
                     <label for="admin-address"><?php echo $this->lang->line('address'); ?></label>
                     <input type="text" id="admin-address" class="span11" />
 
-                    <label for="admin-city"><?php echo $this->lang->line('city'); ?></label>
-                    <input type="text" id="admin-city" class="span11" />
 
-                    <label for="admin-state"><?php echo $this->lang->line('state'); ?></label>
-                    <input type="text" id="admin-state" class="span11" />
 
-                    <label for="admin-zip-code"><?php echo $this->lang->line('zip_code'); ?></label>
-                    <input type="text" id="admin-zip-code" class="span11" />
 
                     <label for="admin-notes"><?php echo $this->lang->line('notes'); ?></label>
                     <textarea id="admin-notes" class="span11" rows="3"></textarea>
