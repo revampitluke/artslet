@@ -95,7 +95,7 @@
             <input type="text" id="phone-number" class="span11 required" />
             
             <label for="billing-account">Billing Account *</label>
-            <input type="text" id="billing-account" class="span11 required" />
+            <input type="number" id="billing-account" class="span11 required" />
 
 
             <label for="platinum">Platinum *</label>

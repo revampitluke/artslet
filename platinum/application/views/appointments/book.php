@@ -303,7 +303,7 @@
 
                         <div class="span3">
                             <label for="billing-account">Billing Account</label>
-                            <input type="text" id="billing-account" maxlength="13" />
+                            <input type="number" id="billing-account" maxlength="13" />
 
                             <label for="platinum">Platinum customer?</label>
                             <select name="platinum" id="platinum">  

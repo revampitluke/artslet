@@ -255,31 +255,27 @@
                 </div>
                 <div class="span6">
                     <div class="control-group">
-                        <label for="address" class="control-label">
-                            <?php echo $this->lang->line('address'); ?>
+                        <label for="billing-account" class="control-label">
+			Billing Account
                         </label>
                         <div class="controls">
-                            <input type="text" id="address" />
+                            <input type="number" id="billing-account" />
+                        </div>
+                    </div>
+			
+			<div class="control-group">
+                        <label for="platinum" class="control-label">
+			Platinum
+                        </label>
+                        <div class="controls">
+                            <select name="platinum" id="platium">
+				<option value="No">No</option>
+				<option vaue="Yes">Yes</option>
+				</select>
                         </div>
                     </div>
 
-                    <div class="control-group">
-                        <label for="city" class="control-label">
-                            <?php echo $this->lang->line('city'); ?>
-                        </label>
-                        <div class="controls">
-                            <input type="text" id="city" />
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label for="zip-code" class="control-label">
-                            <?php echo $this->lang->line('zip_code'); ?>
-                        </label>
-                        <div class="controls">
-                            <input type="text" id="zip-code" />
-                        </div>
-                    </div>
+                    
                     
                     <div class="control-group">
                         <label for="customer-notes" class="control-label">
